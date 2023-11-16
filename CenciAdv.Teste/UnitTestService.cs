@@ -159,7 +159,7 @@ namespace CenciAdv.Teste
         public void TestTransacao()
         {
             var sp = ConfiguraServices();
-            var _consultaService = sp.GetService<IBaseService<Consulta>>();
+            var _transacaoService = sp.GetService<IBaseService<Transacao>>();
 
             var _userService = sp.GetService<IBaseService<Usuario>>();
             var _classificaTransacaoService = sp.GetService<IBaseService<ClassificacaoTransacao>>();
@@ -174,12 +174,12 @@ namespace CenciAdv.Teste
                 Advogado = advogado,
                 ClassificacaoTransacao = classificacaoT,
                 DataTransacao = DateTime.UtcNow.ToLocalTime(),
-                TipoTransacao = classificacaoT.Tipo,
+                TipoTransacao = false,
                 Valor = 500.15F
 
             };
 
-            var result = _consultaService?.Add<Transacao, Transacao, ConsultaValidator>(transacao);
+            var result = _transacaoService?.Add<Transacao, Transacao, TransacaoValidator>(transacao);
             Console.WriteLine(JsonSerializer.Serialize(transacao));
         }
 
