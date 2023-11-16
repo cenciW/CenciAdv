@@ -9,7 +9,7 @@ namespace CenciAdv.Domain.Entities
 {
     public class ClassificacaoTransacao : BaseEntity<int>
     {
-        public string? CodigoTransacao { get; set; }
+        public string? CodAgrupamento { get; set; }
         public string? NomeAgrupamento { get; set; }
         public bool Tipo { get; set; }
 
@@ -20,7 +20,7 @@ namespace CenciAdv.Domain.Entities
 
         public ClassificacaoTransacao(int id, string codTransacao, string nomeAgrupamento, bool tipo)
         {
-            CodigoTransacao= codTransacao;
+            CodAgrupamento= codTransacao;
             NomeAgrupamento= nomeAgrupamento;
             Tipo = tipo;
         }

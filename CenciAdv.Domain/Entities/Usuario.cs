@@ -9,7 +9,7 @@ namespace CenciAdv.Domain.Entities
             
         }
 
-        public Usuario(int id, string? nome, string? senha, string? login, string? email, DateTime dataCadastro, DateTime dataLogin, bool ativo) : base(id)
+        public Usuario(int id, string? nome, string? senha, string login, string? email, DateTime dataCadastro, DateTime dataLogin, bool ativo) : base(id)
         {
             Nome = nome;
             Senha = senha;
