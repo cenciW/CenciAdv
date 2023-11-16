@@ -16,9 +16,7 @@ namespace CenciAdv.Service.Validators
                 .NotEmpty().WithMessage("Por favor informe o nome do agrupamento.")
                 .NotNull().WithMessage("Por favor informe o nome do agrupamento.");
 
-            RuleFor(c => c.Tipo)
-                .NotEmpty().WithMessage("Por favor informe o tipo da transação.")
-                .NotNull().WithMessage("Por favor informe o tipo da transação.");
+         
         }
     }
 }
