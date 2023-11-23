@@ -44,17 +44,17 @@ namespace CenciAdv.App
 
         private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Exibeformulario<CadastroUsuario>();
+            //Exibeformulario<CadastroUsuario>();
         }
 
         private void grupoDeProdutosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Exibeformulario<CadastroGrupo>();
+            //Exibeformulario<CadastroGrupo>();
         }
 
         private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Exibeformulario<CadastroProduto>();
+            //Exibeformulario<CadastroProduto>();
         }
 
         private void cidadesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -64,12 +64,12 @@ namespace CenciAdv.App
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Exibeformulario<CadastroCliente>();
+            //Exibeformulario<CadastroCliente>();
         }
 
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Exibeformulario<CadastroVenda>();
+            //Exibeformulario<CadastroVenda>();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
