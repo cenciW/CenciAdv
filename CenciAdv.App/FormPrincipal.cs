@@ -64,7 +64,7 @@ namespace CenciAdv.App
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Exibeformulario<CadastroCliente>();
+            Exibeformulario<CadastroCliente>();
         }
 
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,6 +85,11 @@ namespace CenciAdv.App
                 cad.MdiParent = this;
                 cad.Show();
             }
+        }
+
+        private void clientesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Exibeformulario<CadastroCliente>();
         }
     }
 }
