@@ -54,12 +54,12 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(561, 6);
+            this.btnCancelar.Location = new System.Drawing.Point(549, 6);
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(686, 6);
+            this.btnSalvar.Location = new System.Drawing.Point(674, 6);
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // panel1
