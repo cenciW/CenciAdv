@@ -62,10 +62,6 @@ namespace CenciAdv.App
             Exibeformulario<CadastroCidade>();
         }
 
-        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Exibeformulario<CadastroCliente>();
-        }
 
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -87,9 +83,22 @@ namespace CenciAdv.App
             }
         }
 
-        private void clientesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void FormPrincipal_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.ApplicationExitCall)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Exibeformulario<CadastroCliente>();
+        }
+
+        private void agendarHorarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Exibeformulario<CadastroConsulta>();
         }
     }
 }

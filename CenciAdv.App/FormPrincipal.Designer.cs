@@ -112,7 +112,7 @@
             // 
             this.cidadesToolStripMenuItem.Name = "cidadesToolStripMenuItem";
             this.cidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cidadesToolStripMenuItem.Text = "C&idades";
+            this.cidadesToolStripMenuItem.Text = "&Cidades";
             this.cidadesToolStripMenuItem.Click += new System.EventHandler(this.cidadesToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
@@ -120,7 +120,7 @@
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "&Clientes";
-            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click_1);
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
@@ -132,6 +132,7 @@
             this.agendarHorarioToolStripMenuItem.Name = "agendarHorarioToolStripMenuItem";
             this.agendarHorarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.agendarHorarioToolStripMenuItem.Text = "&Agendar Horario";
+            this.agendarHorarioToolStripMenuItem.Click += new System.EventHandler(this.agendarHorarioToolStripMenuItem_Click);
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -197,6 +198,7 @@
             this.Name = "FormPrincipal";
             this.Text = "Cenci Advocacia - Sistema de Gerenciamento";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipal_FormClosing_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

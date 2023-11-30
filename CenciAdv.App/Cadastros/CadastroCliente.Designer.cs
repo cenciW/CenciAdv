@@ -43,7 +43,8 @@
             // 
             // materialTabControl
             // 
-            this.materialTabControl.Size = new System.Drawing.Size(794, 492);
+            this.materialTabControl.Size = new System.Drawing.Size(844, 508);
+            this.materialTabControl.SelectedIndexChanged += new System.EventHandler(this.materialTabControl_SelectedIndexChanged);
             // 
             // tabPageCadastro
             // 
@@ -54,7 +55,7 @@
             this.tabPageCadastro.Controls.Add(this.txtId);
             this.tabPageCadastro.Controls.Add(this.txtEndereco);
             this.tabPageCadastro.Controls.Add(this.txtNome);
-            this.tabPageCadastro.Size = new System.Drawing.Size(786, 457);
+            this.tabPageCadastro.Size = new System.Drawing.Size(836, 473);
             this.tabPageCadastro.Click += new System.EventHandler(this.tabPageCadastro_Click);
             this.tabPageCadastro.Controls.SetChildIndex(this.panel1, 0);
             this.tabPageCadastro.Controls.SetChildIndex(this.txtNome, 0);
@@ -67,16 +68,18 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(556, 6);
+            this.btnCancelar.AutoSize = false;
+            this.btnCancelar.Location = new System.Drawing.Point(653, 6);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(680, 6);
+            this.btnSalvar.AutoSize = false;
+            this.btnSalvar.Location = new System.Drawing.Point(777, 6);
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(3, 406);
-            this.panel1.Size = new System.Drawing.Size(780, 48);
+            this.panel1.Location = new System.Drawing.Point(3, 422);
+            this.panel1.Size = new System.Drawing.Size(830, 48);
             // 
             // imageList1
             // 
@@ -240,9 +243,10 @@
             this.txtCpf.BeepOnError = false;
             this.txtCpf.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtCpf.Depth = 0;
-            this.txtCpf.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCpf.HidePromptOnLeave = false;
             this.txtCpf.HideSelection = true;
+            this.txtCpf.Hint = "CPF";
             this.txtCpf.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtCpf.LeadingIcon = null;
             this.txtCpf.Location = new System.Drawing.Point(6, 66);
@@ -285,6 +289,7 @@
             this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtTelefone.HidePromptOnLeave = false;
             this.txtTelefone.HideSelection = true;
+            this.txtTelefone.Hint = "Telefone";
             this.txtTelefone.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtTelefone.LeadingIcon = null;
             this.txtTelefone.Location = new System.Drawing.Point(6, 120);
@@ -319,7 +324,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 559);
+            this.ClientSize = new System.Drawing.Size(850, 575);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "CadastroCliente";
             this.Text = "Cadastro de Clientes";
@@ -327,7 +332,6 @@
             this.tabPageCadastro.ResumeLayout(false);
             this.tabPageCadastro.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

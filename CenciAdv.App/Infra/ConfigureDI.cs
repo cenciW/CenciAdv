@@ -59,7 +59,8 @@ namespace CenciAdv.App.Infra
             //Services.AddTransient<CadastroGrupo, CadastroGrupo>();
             //Services.AddTransient<CadastroProduto, CadastroProduto>();
             Services.AddTransient<CadastroCidade, CadastroCidade>();
-            //Services.AddTransient<CadastroCliente, CadastroCliente>();
+            Services.AddTransient<CadastroCliente, CadastroCliente>();
+            Services.AddTransient<CadastroConsulta, CadastroConsulta>();
             //Services.AddTransient<CadastroVenda, CadastroVenda>();
 
             // Mapping
