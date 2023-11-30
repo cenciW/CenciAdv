@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroTransacao));
-            this.txtDataTransacao = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.txtDescricaoTransacao = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
-            this.cboAdvogado = new ReaLTaiizor.Controls.MaterialComboBox();
             this.cboTiposTransacao = new ReaLTaiizor.Controls.MaterialComboBox();
             this.txtValorTransacao = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.radDespesa = new ReaLTaiizor.Controls.MaterialRadioButton();
             this.radReceita = new ReaLTaiizor.Controls.MaterialRadioButton();
+            this.txtNomeAdvogado = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.materialLabel1 = new ReaLTaiizor.Controls.MaterialLabel();
             this.materialTabControl.SuspendLayout();
             this.tabPageCadastro.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -48,32 +49,34 @@
             // 
             // tabPageCadastro
             // 
+            this.tabPageCadastro.Controls.Add(this.materialLabel1);
+            this.tabPageCadastro.Controls.Add(this.dateTimePicker1);
+            this.tabPageCadastro.Controls.Add(this.txtNomeAdvogado);
             this.tabPageCadastro.Controls.Add(this.radReceita);
             this.tabPageCadastro.Controls.Add(this.radDespesa);
             this.tabPageCadastro.Controls.Add(this.txtValorTransacao);
             this.tabPageCadastro.Controls.Add(this.cboTiposTransacao);
-            this.tabPageCadastro.Controls.Add(this.cboAdvogado);
             this.tabPageCadastro.Controls.Add(this.txtDescricaoTransacao);
             this.tabPageCadastro.Controls.Add(this.txtId);
-            this.tabPageCadastro.Controls.Add(this.txtDataTransacao);
             this.tabPageCadastro.Size = new System.Drawing.Size(974, 336);
             this.tabPageCadastro.Controls.SetChildIndex(this.panel1, 0);
-            this.tabPageCadastro.Controls.SetChildIndex(this.txtDataTransacao, 0);
             this.tabPageCadastro.Controls.SetChildIndex(this.txtId, 0);
             this.tabPageCadastro.Controls.SetChildIndex(this.txtDescricaoTransacao, 0);
-            this.tabPageCadastro.Controls.SetChildIndex(this.cboAdvogado, 0);
             this.tabPageCadastro.Controls.SetChildIndex(this.cboTiposTransacao, 0);
             this.tabPageCadastro.Controls.SetChildIndex(this.txtValorTransacao, 0);
             this.tabPageCadastro.Controls.SetChildIndex(this.radDespesa, 0);
             this.tabPageCadastro.Controls.SetChildIndex(this.radReceita, 0);
+            this.tabPageCadastro.Controls.SetChildIndex(this.txtNomeAdvogado, 0);
+            this.tabPageCadastro.Controls.SetChildIndex(this.dateTimePicker1, 0);
+            this.tabPageCadastro.Controls.SetChildIndex(this.materialLabel1, 0);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(685, 6);
+            this.btnCancelar.Location = new System.Drawing.Point(689, 6);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(809, 6);
+            this.btnSalvar.Location = new System.Drawing.Point(813, 6);
             // 
             // panel1
             // 
@@ -85,37 +88,6 @@
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.Images.SetKeyName(0, "form.png");
             this.imageList1.Images.SetKeyName(1, "search.png");
-            // 
-            // txtDataTransacao
-            // 
-            this.txtDataTransacao.AnimateReadOnly = false;
-            this.txtDataTransacao.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtDataTransacao.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtDataTransacao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtDataTransacao.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtDataTransacao.Depth = 0;
-            this.txtDataTransacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtDataTransacao.HideSelection = true;
-            this.txtDataTransacao.Hint = "Data da Transacao";
-            this.txtDataTransacao.LeadingIcon = null;
-            this.txtDataTransacao.Location = new System.Drawing.Point(6, 197);
-            this.txtDataTransacao.MaxLength = 32767;
-            this.txtDataTransacao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.txtDataTransacao.Name = "txtDataTransacao";
-            this.txtDataTransacao.PasswordChar = '\0';
-            this.txtDataTransacao.PrefixSuffixText = null;
-            this.txtDataTransacao.ReadOnly = true;
-            this.txtDataTransacao.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDataTransacao.SelectedText = "";
-            this.txtDataTransacao.SelectionLength = 0;
-            this.txtDataTransacao.SelectionStart = 0;
-            this.txtDataTransacao.ShortcutsEnabled = true;
-            this.txtDataTransacao.Size = new System.Drawing.Size(434, 48);
-            this.txtDataTransacao.TabIndex = 18;
-            this.txtDataTransacao.TabStop = false;
-            this.txtDataTransacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtDataTransacao.TrailingIcon = null;
-            this.txtDataTransacao.UseSystemPasswordChar = false;
             // 
             // txtId
             // 
@@ -179,29 +151,6 @@
             this.txtDescricaoTransacao.TrailingIcon = null;
             this.txtDescricaoTransacao.UseSystemPasswordChar = false;
             // 
-            // cboAdvogado
-            // 
-            this.cboAdvogado.AutoResize = false;
-            this.cboAdvogado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cboAdvogado.Depth = 0;
-            this.cboAdvogado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboAdvogado.DropDownHeight = 174;
-            this.cboAdvogado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboAdvogado.DropDownWidth = 121;
-            this.cboAdvogado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cboAdvogado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cboAdvogado.FormattingEnabled = true;
-            this.cboAdvogado.Hint = "Advogado";
-            this.cboAdvogado.IntegralHeight = false;
-            this.cboAdvogado.ItemHeight = 43;
-            this.cboAdvogado.Location = new System.Drawing.Point(6, 8);
-            this.cboAdvogado.MaxDropDownItems = 4;
-            this.cboAdvogado.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.cboAdvogado.Name = "cboAdvogado";
-            this.cboAdvogado.Size = new System.Drawing.Size(658, 49);
-            this.cboAdvogado.StartIndex = 0;
-            this.cboAdvogado.TabIndex = 22;
-            // 
             // cboTiposTransacao
             // 
             this.cboTiposTransacao.AutoResize = false;
@@ -217,7 +166,7 @@
             this.cboTiposTransacao.Hint = "Tipo Transacao";
             this.cboTiposTransacao.IntegralHeight = false;
             this.cboTiposTransacao.ItemHeight = 43;
-            this.cboTiposTransacao.Location = new System.Drawing.Point(446, 196);
+            this.cboTiposTransacao.Location = new System.Drawing.Point(463, 216);
             this.cboTiposTransacao.MaxDropDownItems = 4;
             this.cboTiposTransacao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             this.cboTiposTransacao.Name = "cboTiposTransacao";
@@ -290,6 +239,60 @@
             this.radReceita.UseAccentColor = false;
             this.radReceita.UseVisualStyleBackColor = true;
             // 
+            // txtNomeAdvogado
+            // 
+            this.txtNomeAdvogado.AnimateReadOnly = false;
+            this.txtNomeAdvogado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtNomeAdvogado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtNomeAdvogado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtNomeAdvogado.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtNomeAdvogado.Depth = 0;
+            this.txtNomeAdvogado.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNomeAdvogado.HideSelection = true;
+            this.txtNomeAdvogado.Hint = "Advogado";
+            this.txtNomeAdvogado.LeadingIcon = null;
+            this.txtNomeAdvogado.Location = new System.Drawing.Point(6, 18);
+            this.txtNomeAdvogado.MaxLength = 32767;
+            this.txtNomeAdvogado.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            this.txtNomeAdvogado.Name = "txtNomeAdvogado";
+            this.txtNomeAdvogado.PasswordChar = '\0';
+            this.txtNomeAdvogado.PrefixSuffixText = null;
+            this.txtNomeAdvogado.ReadOnly = true;
+            this.txtNomeAdvogado.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtNomeAdvogado.SelectedText = "";
+            this.txtNomeAdvogado.SelectionLength = 0;
+            this.txtNomeAdvogado.SelectionStart = 0;
+            this.txtNomeAdvogado.ShortcutsEnabled = true;
+            this.txtNomeAdvogado.Size = new System.Drawing.Size(548, 48);
+            this.txtNomeAdvogado.TabIndex = 28;
+            this.txtNomeAdvogado.TabStop = false;
+            this.txtNomeAdvogado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNomeAdvogado.TrailingIcon = null;
+            this.txtNomeAdvogado.UseSystemPasswordChar = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(6, 222);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(427, 43);
+            this.dateTimePicker1.TabIndex = 29;
+            this.dateTimePicker1.Value = new System.DateTime(2023, 11, 30, 0, 0, 0, 0);
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(6, 200);
+            this.materialLabel1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(141, 19);
+            this.materialLabel1.TabIndex = 30;
+            this.materialLabel1.Text = "Data da Transação:";
+            // 
             // CadastroTransacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -308,14 +311,14 @@
         }
 
         #endregion
-
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtDataTransacao;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtDescricaoTransacao;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtId;
         private ReaLTaiizor.Controls.MaterialComboBox cboTiposTransacao;
-        private ReaLTaiizor.Controls.MaterialComboBox cboAdvogado;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtValorTransacao;
         private ReaLTaiizor.Controls.MaterialRadioButton radReceita;
         private ReaLTaiizor.Controls.MaterialRadioButton radDespesa;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtNomeAdvogado;
+        private ReaLTaiizor.Controls.MaterialLabel materialLabel1;
+        private DateTimePicker dateTimePicker1;
     }
 }

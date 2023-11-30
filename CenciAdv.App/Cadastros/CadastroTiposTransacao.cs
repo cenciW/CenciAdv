@@ -24,6 +24,7 @@ namespace CenciAdv.App.Cadastros
         {
             _clasTransService= clasTransService;
             InitializeComponent();
+
         }
 
         private void PreencheObjeto(ClassificacaoTransacao ct)
@@ -88,8 +89,7 @@ namespace CenciAdv.App.Cadastros
             dataGridViewConsulta.DataSource = tipos;
             dataGridViewConsulta.Columns["CodAgrupamento"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewConsulta.Columns["NomeAgrupamento"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewConsulta.Columns["Receita"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewConsulta.Columns["Despesa"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewConsulta.Columns["Tipo"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         protected override void CarregaRegistro(DataGridViewRow? linha)
