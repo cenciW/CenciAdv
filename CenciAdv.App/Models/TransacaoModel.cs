@@ -15,6 +15,7 @@ namespace CenciAdv.App.Models
         //1 - Receita
         //0 - Despesa
         public bool TipoTransacao { get; set; }
+        public string DescricaoTransacao { get; set; }
         //public Usuario? Advogado { get; set; }
         public int IdAdvogado { get; set; }
         public string? NomeAdvogado { get; set; }

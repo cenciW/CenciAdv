@@ -11,7 +11,6 @@ namespace CenciAdv.App.Models
     {
 
         public DateTime? Data { get; set; }
-        public string? HoraConsulta { get; set; }
         public int IdAdvogado { get; set; }
         public string? NomeAdvogado { get;set; }
         public int IdCliente { get; set; }

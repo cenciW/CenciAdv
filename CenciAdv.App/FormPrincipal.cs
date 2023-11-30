@@ -42,10 +42,7 @@ namespace CenciAdv.App
             }
         }
 
-        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Exibeformulario<CadastroUsuario>();
-        }
+
 
         private void grupoDeProdutosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -99,6 +96,21 @@ namespace CenciAdv.App
         private void agendarHorarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Exibeformulario<CadastroConsulta>();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Exibeformulario<CadastroUsuario>();
+        }
+
+        private void transacaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Exibeformulario<CadastroTransacao>();
+        }
+
+        private void adicionarGrupoDeTransaçõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Exibeformulario<CadastroTiposTransacao>();
         }
     }
 }

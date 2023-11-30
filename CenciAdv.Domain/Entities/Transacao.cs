@@ -11,16 +11,17 @@ namespace CenciAdv.Domain.Entities
     public class Transacao : BaseEntity<int>
     {
         public Transacao() { }
-        public Transacao(int id, float valor, DateTime dataTransacao, bool tipoTransacao, Usuario? advogado, ClassificacaoTransacao? ct)
+        public Transacao(int id, float valor, DateTime dataTransacao, bool tipoTransacao, Usuario? advogado, ClassificacaoTransacao? ct, string descricaoTransacao)
         {
             Valor = valor;
             DataTransacao = dataTransacao;
             TipoTransacao = tipoTransacao;
             Advogado = advogado;
             ClassificacaoTransacao= ct;
+            descricaoTransacao = DescricaoTransacao;
 
         }
-
+        public string DescricaoTransacao { get; set; }
         public float Valor { get; set; }
         public DateTime? DataTransacao { get; set; }
         //1 - Receita

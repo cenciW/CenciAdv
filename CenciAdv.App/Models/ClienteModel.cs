@@ -15,5 +15,6 @@ namespace CenciAdv.App.Models
         public string? Bairro { get; set; }
         public int IdCidade { get; set; }
         public string? Cidade { get; set; }
+        public string? NomeFone { get; set; }
     }
 }

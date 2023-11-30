@@ -10,15 +10,13 @@ namespace CenciAdv.Domain.Entities
             
         }
 
-        public Consulta(int id, DateTime? data, Usuario? advogado, Cliente? cliente, string hora) : base(id)
+        public Consulta(int id, DateTime? data, Usuario? advogado, Cliente? cliente) : base(id)
         {
             Data = data;
             Advogado = advogado;
             Cliente = cliente;
-            HoraConsulta = hora;
         }
 
-        public string HoraConsulta { get; set; }
         public DateTime? Data { get; set; }
         public Usuario? Advogado { get; set; }
         public Cliente? Cliente { get; set; }

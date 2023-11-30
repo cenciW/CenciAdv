@@ -23,11 +23,11 @@ namespace CenciAdv.Repository.Mapping
 
             builder.Property(prop => prop.Cpf)
                 .IsRequired()
-                .HasColumnType("varchar(11)");
+                .HasColumnType("varchar(25)");
 
             builder.Property(prop => prop.Telefone)
                 .IsRequired()
-                .HasColumnType("varchar(12)");
+                .HasColumnType("varchar(25)");
 
             builder.Property(prop => prop.Endereco)
                 .IsRequired()

@@ -43,7 +43,7 @@
             // 
             // materialTabControl
             // 
-            this.materialTabControl.Size = new System.Drawing.Size(844, 508);
+            this.materialTabControl.Size = new System.Drawing.Size(876, 508);
             this.materialTabControl.SelectedIndexChanged += new System.EventHandler(this.materialTabControl_SelectedIndexChanged);
             // 
             // tabPageCadastro
@@ -55,7 +55,7 @@
             this.tabPageCadastro.Controls.Add(this.txtId);
             this.tabPageCadastro.Controls.Add(this.txtEndereco);
             this.tabPageCadastro.Controls.Add(this.txtNome);
-            this.tabPageCadastro.Size = new System.Drawing.Size(836, 473);
+            this.tabPageCadastro.Size = new System.Drawing.Size(868, 473);
             this.tabPageCadastro.Click += new System.EventHandler(this.tabPageCadastro_Click);
             this.tabPageCadastro.Controls.SetChildIndex(this.panel1, 0);
             this.tabPageCadastro.Controls.SetChildIndex(this.txtNome, 0);
@@ -69,17 +69,17 @@
             // btnCancelar
             // 
             this.btnCancelar.AutoSize = false;
-            this.btnCancelar.Location = new System.Drawing.Point(653, 6);
+            this.btnCancelar.Location = new System.Drawing.Point(560, 6);
             // 
             // btnSalvar
             // 
             this.btnSalvar.AutoSize = false;
-            this.btnSalvar.Location = new System.Drawing.Point(777, 6);
+            this.btnSalvar.Location = new System.Drawing.Point(684, 6);
             // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(3, 422);
-            this.panel1.Size = new System.Drawing.Size(830, 48);
+            this.panel1.Size = new System.Drawing.Size(862, 48);
             // 
             // imageList1
             // 
@@ -324,7 +324,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 575);
+            this.ClientSize = new System.Drawing.Size(882, 575);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "CadastroCliente";
             this.Text = "Cadastro de Clientes";

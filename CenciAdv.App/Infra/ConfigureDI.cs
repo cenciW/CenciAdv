@@ -55,9 +55,9 @@ namespace CenciAdv.App.Infra
 
             // Formulários
             Services.AddTransient<Login, Login>();
-            //Services.AddTransient<CadastroUsuario, CadastroUsuario>();
-            //Services.AddTransient<CadastroGrupo, CadastroGrupo>();
-            //Services.AddTransient<CadastroProduto, CadastroProduto>();
+            Services.AddTransient<CadastroUsuario, CadastroUsuario>();
+            Services.AddTransient<CadastroTransacao, CadastroTransacao>();
+            Services.AddTransient<CadastroTiposTransacao, CadastroTiposTransacao>();
             Services.AddTransient<CadastroCidade, CadastroCidade>();
             Services.AddTransient<CadastroCliente, CadastroCliente>();
             Services.AddTransient<CadastroConsulta, CadastroConsulta>();
@@ -73,7 +73,9 @@ namespace CenciAdv.App.Infra
 
                 config.CreateMap<Cliente, ClienteModel>()
                     .ForMember(d => d.Cidade, d => d.MapFrom(x => $"{x.Cidade!.Nome}/{x.Cidade!.Estado}"))
-                    .ForMember(d => d.IdCidade, d => d.MapFrom(x => x.Cidade!.Id));
+                    .ForMember(d => d.IdCidade, d => d.MapFrom(x => x.Cidade!.Id))
+                    .ForMember(d => d.NomeFone, d => d.MapFrom(x => $"{x.Nome}/{x.Telefone}"));
+                    
 
                 config.CreateMap<ClassificacaoTransacao, ClassificacaoTransacaoModel>();
 

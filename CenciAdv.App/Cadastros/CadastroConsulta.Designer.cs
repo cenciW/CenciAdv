@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroConsulta));
             this.cboAdvogado = new ReaLTaiizor.Controls.MaterialComboBox();
             this.cboCliente = new ReaLTaiizor.Controls.MaterialComboBox();
-            this.txtHora = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
             this.txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.materialTabControl.SuspendLayout();
@@ -41,35 +40,33 @@
             // 
             // materialTabControl
             // 
-            this.materialTabControl.Size = new System.Drawing.Size(813, 332);
+            this.materialTabControl.Size = new System.Drawing.Size(913, 332);
             // 
             // tabPageCadastro
             // 
             this.tabPageCadastro.Controls.Add(this.dateTimePicker1);
             this.tabPageCadastro.Controls.Add(this.txtId);
-            this.tabPageCadastro.Controls.Add(this.txtHora);
             this.tabPageCadastro.Controls.Add(this.cboCliente);
             this.tabPageCadastro.Controls.Add(this.cboAdvogado);
-            this.tabPageCadastro.Size = new System.Drawing.Size(805, 297);
+            this.tabPageCadastro.Size = new System.Drawing.Size(905, 297);
             this.tabPageCadastro.Controls.SetChildIndex(this.cboAdvogado, 0);
             this.tabPageCadastro.Controls.SetChildIndex(this.cboCliente, 0);
-            this.tabPageCadastro.Controls.SetChildIndex(this.txtHora, 0);
             this.tabPageCadastro.Controls.SetChildIndex(this.txtId, 0);
             this.tabPageCadastro.Controls.SetChildIndex(this.panel1, 0);
             this.tabPageCadastro.Controls.SetChildIndex(this.dateTimePicker1, 0);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(553, 6);
+            this.btnCancelar.Location = new System.Drawing.Point(662, 6);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(677, 6);
+            this.btnSalvar.Location = new System.Drawing.Point(786, 6);
             // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(3, 246);
-            this.panel1.Size = new System.Drawing.Size(799, 48);
+            this.panel1.Size = new System.Drawing.Size(899, 48);
             // 
             // imageList1
             // 
@@ -123,49 +120,6 @@
             this.cboCliente.StartIndex = 0;
             this.cboCliente.TabIndex = 11;
             // 
-            // txtHora
-            // 
-            this.txtHora.AllowPromptAsInput = true;
-            this.txtHora.AnimateReadOnly = false;
-            this.txtHora.AsciiOnly = false;
-            this.txtHora.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtHora.BeepOnError = false;
-            this.txtHora.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txtHora.Depth = 0;
-            this.txtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtHora.HidePromptOnLeave = false;
-            this.txtHora.HideSelection = true;
-            this.txtHora.Hint = "Hora";
-            this.txtHora.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
-            this.txtHora.LeadingIcon = null;
-            this.txtHora.Location = new System.Drawing.Point(15, 12);
-            this.txtHora.Mask = "__:__";
-            this.txtHora.MaxLength = 32767;
-            this.txtHora.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.txtHora.Name = "txtHora";
-            this.txtHora.PasswordChar = '\0';
-            this.txtHora.PrefixSuffixText = null;
-            this.txtHora.PromptChar = '_';
-            this.txtHora.ReadOnly = false;
-            this.txtHora.RejectInputOnFirstFailure = false;
-            this.txtHora.ResetOnPrompt = true;
-            this.txtHora.ResetOnSpace = true;
-            this.txtHora.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtHora.SelectedText = "";
-            this.txtHora.SelectionLength = 0;
-            this.txtHora.SelectionStart = 0;
-            this.txtHora.ShortcutsEnabled = true;
-            this.txtHora.Size = new System.Drawing.Size(89, 48);
-            this.txtHora.SkipLiterals = true;
-            this.txtHora.TabIndex = 12;
-            this.txtHora.TabStop = false;
-            this.txtHora.Text = "__:__";
-            this.txtHora.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtHora.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txtHora.TrailingIcon = null;
-            this.txtHora.UseSystemPasswordChar = false;
-            this.txtHora.ValidatingType = null;
-            // 
             // txtId
             // 
             this.txtId.AnimateReadOnly = false;
@@ -199,19 +153,22 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(125, 37);
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(15, 6);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(548, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(658, 43);
             this.dateTimePicker1.TabIndex = 14;
             // 
             // CadastroConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 399);
+            this.ClientSize = new System.Drawing.Size(919, 399);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "CadastroConsulta";
-            this.Text = "CadastroConsulta";
+            this.Text = "Cadastro de Consultas";
             this.materialTabControl.ResumeLayout(false);
             this.tabPageCadastro.ResumeLayout(false);
             this.tabPageCadastro.PerformLayout();
@@ -226,6 +183,5 @@
         private ReaLTaiizor.Controls.MaterialComboBox cboAdvogado;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtId;
         private DateTimePicker dateTimePicker1;
-        protected ReaLTaiizor.Controls.MaterialMaskedTextBox txtHora;
     }
 }

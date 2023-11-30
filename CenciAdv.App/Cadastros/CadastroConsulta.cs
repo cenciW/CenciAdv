@@ -37,18 +37,17 @@ namespace CenciAdv.App.Cadastros
         private void CarregarCombo()
         {
             cboAdvogado.ValueMember = "Id";
-            cboAdvogado.DisplayMember = "Nome/Telefone";
+            cboAdvogado.DisplayMember = "Nome";
             cboAdvogado.DataSource = _userService.Get<UsuarioModel>().ToList();
 
             cboCliente.ValueMember = "Id";
-            cboCliente.DisplayMember = "Nome/Telefone";
+            cboCliente.DisplayMember = "NomeFone";
             cboCliente.DataSource = _clienteService.Get<ClienteModel>().ToList();
         }
 
         private void PreencheObjeto(Consulta consulta)
-        {
-            consulta.HoraConsulta = txtHora.Text;
-            consulta.Data = dateTimePicker1.MaxDate;
+        {;
+            consulta.Data = dateTimePicker1.Value;
 
             if (int.TryParse(cboAdvogado.SelectedValue.ToString(), out var idGrupo))
             {

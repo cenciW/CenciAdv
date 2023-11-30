@@ -33,8 +33,7 @@
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.ReceitasProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.despesasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.cidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +46,7 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.adicionarGrupoDeTransaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -69,8 +69,8 @@
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.ReceitasProdutosToolStripMenuItem,
-            this.despesasToolStripMenuItem,
+            this.adicionarGrupoDeTransaçõesToolStripMenuItem,
+            this.transacaoToolStripMenuItem,
             this.toolStripMenuItem2,
             this.cidadesToolStripMenuItem,
             this.clientesToolStripMenuItem,
@@ -83,54 +83,50 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.usuariosToolStripMenuItem.Text = "&Usuários";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(234, 6);
             // 
-            // ReceitasProdutosToolStripMenuItem
+            // transacaoToolStripMenuItem
             // 
-            this.ReceitasProdutosToolStripMenuItem.Name = "ReceitasProdutosToolStripMenuItem";
-            this.ReceitasProdutosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ReceitasProdutosToolStripMenuItem.Text = "&Receitas";
-            // 
-            // despesasToolStripMenuItem
-            // 
-            this.despesasToolStripMenuItem.Name = "despesasToolStripMenuItem";
-            this.despesasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.despesasToolStripMenuItem.Text = "&Despesas";
+            this.transacaoToolStripMenuItem.Name = "transacaoToolStripMenuItem";
+            this.transacaoToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.transacaoToolStripMenuItem.Text = "&Adicionar Transação (R$)";
+            this.transacaoToolStripMenuItem.Click += new System.EventHandler(this.transacaoToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(234, 6);
             // 
             // cidadesToolStripMenuItem
             // 
             this.cidadesToolStripMenuItem.Name = "cidadesToolStripMenuItem";
-            this.cidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cidadesToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.cidadesToolStripMenuItem.Text = "&Cidades";
             this.cidadesToolStripMenuItem.Click += new System.EventHandler(this.cidadesToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.clientesToolStripMenuItem.Text = "&Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(234, 6);
             // 
             // agendarHorarioToolStripMenuItem
             // 
             this.agendarHorarioToolStripMenuItem.Name = "agendarHorarioToolStripMenuItem";
-            this.agendarHorarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agendarHorarioToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
             this.agendarHorarioToolStripMenuItem.Text = "&Agendar Horario";
             this.agendarHorarioToolStripMenuItem.Click += new System.EventHandler(this.agendarHorarioToolStripMenuItem_Click);
             // 
@@ -184,6 +180,13 @@
             this.lblUsuario.Size = new System.Drawing.Size(50, 17);
             this.lblUsuario.Text = "Usuário:";
             // 
+            // adicionarGrupoDeTransaçõesToolStripMenuItem
+            // 
+            this.adicionarGrupoDeTransaçõesToolStripMenuItem.Name = "adicionarGrupoDeTransaçõesToolStripMenuItem";
+            this.adicionarGrupoDeTransaçõesToolStripMenuItem.Size = new System.Drawing.Size(237, 22);
+            this.adicionarGrupoDeTransaçõesToolStripMenuItem.Text = "Adicionar Grupo de Transações";
+            this.adicionarGrupoDeTransaçõesToolStripMenuItem.Click += new System.EventHandler(this.adicionarGrupoDeTransaçõesToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -214,8 +217,7 @@
         private ToolStripMenuItem cadastrosToolStripMenuItem;
         private ToolStripMenuItem usuariosToolStripMenuItem;
         private ToolStripSeparator toolStripMenuItem1;
-        private ToolStripMenuItem ReceitasProdutosToolStripMenuItem;
-        private ToolStripMenuItem despesasToolStripMenuItem;
+        private ToolStripMenuItem transacaoToolStripMenuItem;
         private ToolStripSeparator toolStripMenuItem2;
         private ToolStripMenuItem cidadesToolStripMenuItem;
         private ToolStripMenuItem clientesToolStripMenuItem;
@@ -228,5 +230,6 @@
         private ToolStripMenuItem sobreToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
         private ToolStripMenuItem usuáriosToolStripMenuItem1;
+        private ToolStripMenuItem adicionarGrupoDeTransaçõesToolStripMenuItem;
     }
 }
