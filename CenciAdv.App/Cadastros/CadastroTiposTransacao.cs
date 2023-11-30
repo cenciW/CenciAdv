@@ -1,4 +1,5 @@
 ﻿using CenciAdv.App.Base;
+using CenciAdv.App.Models;
 using CenciAdv.Domain.Base;
 using CenciAdv.Domain.Entities;
 using CenciAdv.Service.Validators;
@@ -18,7 +19,7 @@ namespace CenciAdv.App.Cadastros
     {
 
         private readonly IBaseService<ClassificacaoTransacao> _clasTransService;
-        private List<ClassificacaoTransacao>? tipos;
+        private List<ClassificacaoTransacaoModel>? tipos;
 
         public CadastroTiposTransacao(IBaseService<ClassificacaoTransacao> clasTransService)
         {
@@ -85,7 +86,7 @@ namespace CenciAdv.App.Cadastros
             /*            CodAgrupamento= codTransacao;
             NomeAgrupamento= nomeAgrupamento;
             Tipo = tipo;*/
-            tipos = _clasTransService.Get<ClassificacaoTransacao>().ToList();
+            tipos = _clasTransService.Get<ClassificacaoTransacaoModel>().ToList();
             dataGridViewConsulta.DataSource = tipos;
             dataGridViewConsulta.Columns["CodAgrupamento"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewConsulta.Columns["NomeAgrupamento"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;

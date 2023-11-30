@@ -60,11 +60,11 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(535, 6);
+            this.btnCancelar.Location = new System.Drawing.Point(588, 6);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(659, 6);
+            this.btnSalvar.Location = new System.Drawing.Point(712, 6);
             // 
             // panel1
             // 
@@ -213,7 +213,7 @@
             this.ClientSize = new System.Drawing.Size(852, 305);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "CadastroTiposTransacao";
-            this.Text = "CadastroTiposTransacao";
+            this.Text = "Cadastro de Agrupamentos de Transacao";
             this.materialTabControl.ResumeLayout(false);
             this.tabPageCadastro.ResumeLayout(false);
             this.tabPageCadastro.PerformLayout();

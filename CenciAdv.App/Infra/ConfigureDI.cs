@@ -77,7 +77,8 @@ namespace CenciAdv.App.Infra
                     .ForMember(d => d.NomeFone, d => d.MapFrom(x => $"{x.Nome}/{x.Telefone}"));
                     
 
-                config.CreateMap<ClassificacaoTransacao, ClassificacaoTransacaoModel>();
+                config.CreateMap<ClassificacaoTransacao, ClassificacaoTransacaoModel>()
+                .ForMember(d => d.Tipo, d => d.MapFrom(x => x.Tipo ? "Receita": "Despesa"));
 
                 config.CreateMap<Transacao, TransacaoModel>()
                     .ForMember(d => d.IdAdvogado, d => d.MapFrom(x => x.Advogado!.Id))

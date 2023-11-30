@@ -31,14 +31,21 @@ namespace CenciAdv.App.Cadastros
             _clasTransService = clasTransService;
             InitializeComponent();
             txtNomeAdvogado.Text = FormPrincipal.Usuario.Nome;
-            //CarregarCombo();
+            CarregarCombo();
+        }
+
+        private void CarregarCombo()
+        {
+            cboTiposTransacao.ValueMember = "NomeAgrupamento";
+            cboTiposTransacao.DataSource = _clasTransService.Get<ClassificacaoTransacao>().ToList();
+
         }
 
         private void PreencheObjeto(Transacao transacao)
         {
             //valor desc data tipo
             //nunca vai ser nulo pq estou logado no sistema
-            transacao.Advogado.Nome = FormPrincipal.Usuario.Nome;
+            transacao.Advogado = FormPrincipal.Usuario;
             if (float.TryParse(txtValorTransacao.Text, out var valor))
             {
                 transacao.Valor = valor;
