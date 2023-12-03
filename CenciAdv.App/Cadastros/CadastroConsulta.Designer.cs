@@ -29,153 +29,152 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroConsulta));
-            this.cboAdvogado = new ReaLTaiizor.Controls.MaterialComboBox();
-            this.cboCliente = new ReaLTaiizor.Controls.MaterialComboBox();
-            this.txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.materialTabControl.SuspendLayout();
-            this.tabPageCadastro.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            cboAdvogado = new ReaLTaiizor.Controls.MaterialComboBox();
+            cboCliente = new ReaLTaiizor.Controls.MaterialComboBox();
+            txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            dateTimePicker1 = new DateTimePicker();
+            materialTabControl.SuspendLayout();
+            tabPageCadastro.SuspendLayout();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // materialTabControl
             // 
-            this.materialTabControl.Size = new System.Drawing.Size(913, 332);
+            materialTabControl.Size = new Size(805, 426);
             // 
             // tabPageCadastro
             // 
-            this.tabPageCadastro.Controls.Add(this.dateTimePicker1);
-            this.tabPageCadastro.Controls.Add(this.txtId);
-            this.tabPageCadastro.Controls.Add(this.cboCliente);
-            this.tabPageCadastro.Controls.Add(this.cboAdvogado);
-            this.tabPageCadastro.Size = new System.Drawing.Size(905, 297);
-            this.tabPageCadastro.Controls.SetChildIndex(this.cboAdvogado, 0);
-            this.tabPageCadastro.Controls.SetChildIndex(this.cboCliente, 0);
-            this.tabPageCadastro.Controls.SetChildIndex(this.txtId, 0);
-            this.tabPageCadastro.Controls.SetChildIndex(this.panel1, 0);
-            this.tabPageCadastro.Controls.SetChildIndex(this.dateTimePicker1, 0);
+            tabPageCadastro.Controls.Add(dateTimePicker1);
+            tabPageCadastro.Controls.Add(txtId);
+            tabPageCadastro.Controls.Add(cboCliente);
+            tabPageCadastro.Controls.Add(cboAdvogado);
+            tabPageCadastro.Size = new Size(797, 391);
+            tabPageCadastro.Controls.SetChildIndex(cboAdvogado, 0);
+            tabPageCadastro.Controls.SetChildIndex(cboCliente, 0);
+            tabPageCadastro.Controls.SetChildIndex(txtId, 0);
+            tabPageCadastro.Controls.SetChildIndex(panel1, 0);
+            tabPageCadastro.Controls.SetChildIndex(dateTimePicker1, 0);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(662, 6);
+            btnCancelar.Location = new Point(364, 6);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(786, 6);
+            btnSalvar.Location = new Point(488, 6);
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(3, 246);
-            this.panel1.Size = new System.Drawing.Size(899, 48);
+            panel1.Location = new Point(3, 340);
+            panel1.Size = new Size(791, 48);
             // 
             // imageList1
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.Images.SetKeyName(0, "form.png");
-            this.imageList1.Images.SetKeyName(1, "search.png");
+            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
+            imageList1.Images.SetKeyName(0, "form.png");
+            imageList1.Images.SetKeyName(1, "search.png");
             // 
             // cboAdvogado
             // 
-            this.cboAdvogado.AutoResize = false;
-            this.cboAdvogado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cboAdvogado.Depth = 0;
-            this.cboAdvogado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboAdvogado.DropDownHeight = 174;
-            this.cboAdvogado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboAdvogado.DropDownWidth = 121;
-            this.cboAdvogado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cboAdvogado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cboAdvogado.FormattingEnabled = true;
-            this.cboAdvogado.Hint = "Advogado";
-            this.cboAdvogado.IntegralHeight = false;
-            this.cboAdvogado.ItemHeight = 43;
-            this.cboAdvogado.Location = new System.Drawing.Point(15, 71);
-            this.cboAdvogado.MaxDropDownItems = 4;
-            this.cboAdvogado.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.cboAdvogado.Name = "cboAdvogado";
-            this.cboAdvogado.Size = new System.Drawing.Size(658, 49);
-            this.cboAdvogado.StartIndex = 0;
-            this.cboAdvogado.TabIndex = 10;
+            cboAdvogado.AutoResize = false;
+            cboAdvogado.BackColor = Color.FromArgb(255, 255, 255);
+            cboAdvogado.Depth = 0;
+            cboAdvogado.DrawMode = DrawMode.OwnerDrawVariable;
+            cboAdvogado.DropDownHeight = 174;
+            cboAdvogado.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboAdvogado.DropDownWidth = 121;
+            cboAdvogado.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboAdvogado.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboAdvogado.FormattingEnabled = true;
+            cboAdvogado.Hint = "Advogado";
+            cboAdvogado.IntegralHeight = false;
+            cboAdvogado.ItemHeight = 43;
+            cboAdvogado.Location = new Point(15, 71);
+            cboAdvogado.MaxDropDownItems = 4;
+            cboAdvogado.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cboAdvogado.Name = "cboAdvogado";
+            cboAdvogado.Size = new Size(658, 49);
+            cboAdvogado.StartIndex = 0;
+            cboAdvogado.TabIndex = 10;
             // 
             // cboCliente
             // 
-            this.cboCliente.AutoResize = false;
-            this.cboCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cboCliente.Depth = 0;
-            this.cboCliente.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboCliente.DropDownHeight = 174;
-            this.cboCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCliente.DropDownWidth = 121;
-            this.cboCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cboCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cboCliente.FormattingEnabled = true;
-            this.cboCliente.Hint = "Cliente";
-            this.cboCliente.IntegralHeight = false;
-            this.cboCliente.ItemHeight = 43;
-            this.cboCliente.Location = new System.Drawing.Point(15, 142);
-            this.cboCliente.MaxDropDownItems = 4;
-            this.cboCliente.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.cboCliente.Name = "cboCliente";
-            this.cboCliente.Size = new System.Drawing.Size(658, 49);
-            this.cboCliente.StartIndex = 0;
-            this.cboCliente.TabIndex = 11;
+            cboCliente.AutoResize = false;
+            cboCliente.BackColor = Color.FromArgb(255, 255, 255);
+            cboCliente.Depth = 0;
+            cboCliente.DrawMode = DrawMode.OwnerDrawVariable;
+            cboCliente.DropDownHeight = 174;
+            cboCliente.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboCliente.DropDownWidth = 121;
+            cboCliente.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboCliente.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboCliente.FormattingEnabled = true;
+            cboCliente.Hint = "Cliente";
+            cboCliente.IntegralHeight = false;
+            cboCliente.ItemHeight = 43;
+            cboCliente.Location = new Point(15, 142);
+            cboCliente.MaxDropDownItems = 4;
+            cboCliente.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cboCliente.Name = "cboCliente";
+            cboCliente.Size = new Size(658, 49);
+            cboCliente.StartIndex = 0;
+            cboCliente.TabIndex = 11;
             // 
             // txtId
             // 
-            this.txtId.AnimateReadOnly = false;
-            this.txtId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtId.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtId.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtId.Depth = 0;
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtId.HideSelection = true;
-            this.txtId.Hint = "Id";
-            this.txtId.LeadingIcon = null;
-            this.txtId.Location = new System.Drawing.Point(697, 20);
-            this.txtId.MaxLength = 32767;
-            this.txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.txtId.Name = "txtId";
-            this.txtId.PasswordChar = '\0';
-            this.txtId.PrefixSuffixText = null;
-            this.txtId.ReadOnly = true;
-            this.txtId.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtId.SelectedText = "";
-            this.txtId.SelectionLength = 0;
-            this.txtId.SelectionStart = 0;
-            this.txtId.ShortcutsEnabled = true;
-            this.txtId.Size = new System.Drawing.Size(89, 48);
-            this.txtId.TabIndex = 13;
-            this.txtId.TabStop = false;
-            this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtId.TrailingIcon = null;
-            this.txtId.UseSystemPasswordChar = false;
+            txtId.AnimateReadOnly = false;
+            txtId.AutoCompleteMode = AutoCompleteMode.None;
+            txtId.AutoCompleteSource = AutoCompleteSource.None;
+            txtId.BackgroundImageLayout = ImageLayout.None;
+            txtId.CharacterCasing = CharacterCasing.Normal;
+            txtId.Depth = 0;
+            txtId.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtId.HideSelection = true;
+            txtId.Hint = "Id";
+            txtId.LeadingIcon = null;
+            txtId.Location = new Point(697, 20);
+            txtId.MaxLength = 32767;
+            txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            txtId.Name = "txtId";
+            txtId.PasswordChar = '\0';
+            txtId.PrefixSuffixText = null;
+            txtId.ReadOnly = true;
+            txtId.RightToLeft = RightToLeft.No;
+            txtId.SelectedText = "";
+            txtId.SelectionLength = 0;
+            txtId.SelectionStart = 0;
+            txtId.ShortcutsEnabled = true;
+            txtId.Size = new Size(89, 48);
+            txtId.TabIndex = 13;
+            txtId.TabStop = false;
+            txtId.TextAlign = HorizontalAlignment.Left;
+            txtId.TrailingIcon = null;
+            txtId.UseSystemPasswordChar = false;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(15, 6);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(658, 43);
-            this.dateTimePicker1.TabIndex = 14;
+            dateTimePicker1.CustomFormat = "dd/MM/yyyy HH:mm";
+            dateTimePicker1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.Location = new Point(15, 6);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(658, 43);
+            dateTimePicker1.TabIndex = 14;
             // 
             // CadastroConsulta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 399);
-            this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "CadastroConsulta";
-            this.Text = "Cadastro de Consultas";
-            this.materialTabControl.ResumeLayout(false);
-            this.tabPageCadastro.ResumeLayout(false);
-            this.tabPageCadastro.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(811, 493);
+            Location = new Point(0, 0);
+            Name = "CadastroConsulta";
+            Text = "Cadastro de Consultas";
+            materialTabControl.ResumeLayout(false);
+            tabPageCadastro.ResumeLayout(false);
+            tabPageCadastro.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -46,7 +47,7 @@ namespace CenciAdv.App.Cadastros
         }
 
         private void PreencheObjeto(Consulta consulta)
-        {;
+        {
             consulta.Data = dateTimePicker1.Value;
 
             if (int.TryParse(cboAdvogado.SelectedValue.ToString(), out var idGrupo))
