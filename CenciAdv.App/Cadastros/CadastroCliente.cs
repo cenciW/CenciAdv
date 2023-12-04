@@ -103,7 +103,7 @@ namespace CenciAdv.App.Cadastros
 
         protected override void CarregaRegistro(DataGridViewRow? linha)
         {
-            txtId.Text = linha?.Cells["Id"].Value.ToString();
+            txtId.Text = linha?.Cells["id"].Value.ToString();
             txtCpf.Text = linha?.Cells["Cpf"].Value.ToString();
             txtTelefone.Text = linha?.Cells["Telefone"].Value.ToString();
             txtNome.Text = linha?.Cells["Nome"].Value.ToString();

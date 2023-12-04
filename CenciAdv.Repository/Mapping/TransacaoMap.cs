@@ -26,6 +26,11 @@ namespace CenciAdv.Repository.Mapping
                 .IsRequired()
                 .HasColumnType("DateTime");
 
+            builder.Property(prop => prop.DescricaoTransacao)
+                .IsRequired()
+                .HasColumnName("DescricaoTransacao")
+                .HasColumnType("varchar(100)");
+
             builder.Property(prop => prop.TipoTransacao)
                 .IsRequired()
                 .HasColumnType("tinyint");

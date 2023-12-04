@@ -8,7 +8,7 @@ namespace CenciAdv.Repository.Mapping
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)
         {
-            builder.ToTable("Usuario");
+            builder.ToTable("Advogado");
 
             builder.HasKey(prop => prop.Id);
 

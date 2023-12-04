@@ -50,18 +50,25 @@ namespace CenciAdv.App.Cadastros
         {
             consulta.Data = dateTimePicker1.Value;
 
-            if (int.TryParse(cboAdvogado.SelectedValue.ToString(), out var idGrupo))
+            if (cboAdvogado.SelectedItem != null && cboAdvogado.SelectedValue != null)
             {
-                var advogado = _userService.GetById<Usuario>(idGrupo);
-                consulta.Advogado = advogado;
+                if (int.TryParse(cboAdvogado.SelectedValue.ToString(), out var idAdvogado))
+                {
+                    var advogado = _userService.GetById<Usuario>(idAdvogado);
+                    consulta.Advogado = advogado;
+                }
             }
 
-            if (int.TryParse(cboCliente.SelectedValue.ToString(), out var id))
+            if (cboCliente.SelectedItem != null && cboCliente.SelectedValue != null)
             {
-                var cliente = _clienteService.GetById<Cliente>(id);
-                consulta.Cliente = cliente;
+                if (int.TryParse(cboCliente.SelectedValue.ToString(), out var idCliente))
+                {
+                    var cliente = _clienteService.GetById<Cliente>(idCliente);
+                    consulta.Cliente = cliente;
+                }
             }
         }
+
         protected override void Salvar()
         {
             try

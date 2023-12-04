@@ -27,7 +27,7 @@ namespace CenciAdv.App.Cadastros
         public CadastroTransacao(IBaseService<Transacao> transacaoService, IBaseService<Usuario> usuarioService, IBaseService<ClassificacaoTransacao> clasTransService)
         {
             _transacaoService = transacaoService;
-            _usuarioService= usuarioService;
+            _usuarioService = usuarioService;
             _clasTransService = clasTransService;
             InitializeComponent();
             txtNomeAdvogado.Text = FormPrincipal.Usuario.Nome;
