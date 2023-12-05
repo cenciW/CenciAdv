@@ -123,11 +123,13 @@ namespace CenciAdv.App.Cadastros
             dataGridViewConsulta.Columns["TipoAgrupamento"].Visible = false;
             dataGridViewConsulta.Columns["TipoTransacao"].Visible = false;
 
-            /* NAO FUNCIONA ESSA BUCETA
+
+
             DataGridViewTextBoxColumn colunaTipoTransacaoTexto = new DataGridViewTextBoxColumn
             {
                 Name = "TipoTransacaoTxt",
-                HeaderText = "Tipo da Transação"
+                HeaderText = "Tipo da Transação",
+
             };
 
             // Adicione a nova coluna ao DataGridView
@@ -159,7 +161,7 @@ namespace CenciAdv.App.Cadastros
                     }
                 }
             }
-            */
+            
 
             transacoes = _transacaoService.Get<TransacaoModel>(new List<string> { "Advogado", "ClassificacaoTransacao" }).ToList();
             dataGridViewConsulta.DataSource = transacoes;
@@ -168,6 +170,8 @@ namespace CenciAdv.App.Cadastros
 
             dataGridViewConsulta.Columns["CodAgrupamento"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewConsulta.Columns["NomeAgrupamento"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            //dataGridViewConsulta.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
 
         }
         protected override void CarregaRegistro(DataGridViewRow? linha)
