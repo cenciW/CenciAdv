@@ -9,6 +9,11 @@ namespace CenciAdv.App.Models
 {
     public class ConsultaModel
     {
+        public ConsultaModel()
+        {
+                
+        }
+        public int Id { get; set; }
 
         public DateTime? Data { get; set; }
         public int IdAdvogado { get; set; }

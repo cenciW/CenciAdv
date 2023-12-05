@@ -18,7 +18,7 @@ namespace CenciAdv.Domain.Entities
             TipoTransacao = tipoTransacao;
             Advogado = advogado;
             ClassificacaoTransacao= ct;
-            descricaoTransacao = DescricaoTransacao;
+            DescricaoTransacao = descricaoTransacao;
 
         }
         public string DescricaoTransacao { get; set; }

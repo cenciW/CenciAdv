@@ -38,6 +38,8 @@ namespace CenciAdv.Repository.Mapping
 
             builder.HasOne(prop => prop.Advogado);
             builder.HasOne(prop => prop.ClassificacaoTransacao);
+
+            
         }
     }
 }

@@ -22,12 +22,16 @@ namespace CenciAdv.App.Cadastros
         private readonly IBaseService<Cliente> _clienteService;
         private readonly IBaseService<Usuario> _userService;
         private readonly IBaseService<Consulta> _consultaService;
+        private readonly IBaseService<Cidade> _cidadeService;
 
         private List<ClienteModel>? clientes;
+        private List<ConsultaModel>? consultas;
         private List<UsuarioModel>? advogados;
 
-        public CadastroConsulta(IBaseService<Cliente> clienteService, IBaseService<Usuario> userService, IBaseService<Consulta> consultaService)
+        public CadastroConsulta(IBaseService<Cliente> clienteService, IBaseService<Usuario> userService
+            , IBaseService<Consulta> consultaService, IBaseService<Cidade> cidadeService)
         {
+            _cidadeService = cidadeService;
             _clienteService = clienteService;
             _userService = userService;
             _consultaService = consultaService;
@@ -48,25 +52,22 @@ namespace CenciAdv.App.Cadastros
 
         private void PreencheObjeto(Consulta consulta)
         {
+
+            if (int.TryParse(cboAdvogado.SelectedValue.ToString(), out var idAdvogado))
+            {
+                var adv = _userService.GetById<Usuario>(idAdvogado);
+                consulta.Advogado = adv;
+            }
+
+            if (int.TryParse(cboCliente.SelectedValue.ToString(), out var idCliente))
+            {
+                var cli = _clienteService.GetById<Cliente>(idCliente);
+                consulta.Cliente = cli;
+            }
+
             consulta.Data = dateTimePicker1.Value;
+            //consulta.Data = DateTime.UtcNow.ToLocalTime();
 
-            if (cboAdvogado.SelectedItem != null && cboAdvogado.SelectedValue != null)
-            {
-                if (int.TryParse(cboAdvogado.SelectedValue.ToString(), out var idAdvogado))
-                {
-                    var advogado = _userService.GetById<Usuario>(idAdvogado);
-                    consulta.Advogado = advogado;
-                }
-            }
-
-            if (cboCliente.SelectedItem != null && cboCliente.SelectedValue != null)
-            {
-                if (int.TryParse(cboCliente.SelectedValue.ToString(), out var idCliente))
-                {
-                    var cliente = _clienteService.GetById<Cliente>(idCliente);
-                    consulta.Cliente = cliente;
-                }
-            }
         }
 
         protected override void Salvar()
@@ -112,16 +113,15 @@ namespace CenciAdv.App.Cadastros
 
         protected override void CarregaGrid()
         {
-            advogados = _userService.Get<UsuarioModel>(new[] { "Advogado" }).ToList();
-            dataGridViewConsulta.DataSource = advogados;
-            dataGridViewConsulta.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewConsulta.Columns["IdAdvogado"]!.Visible = false;
-
-            clientes = _clienteService.Get<ClienteModel>(new[] { "Cliente" }).ToList();
-            dataGridViewConsulta.DataSource = clientes;
-            dataGridViewConsulta.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewConsulta.Columns["IdCliente"]!.Visible = false;
+           
+            consultas = _consultaService.Get<ConsultaModel>().ToList();
+            dataGridViewConsulta.DataSource = consultas;
+            dataGridViewConsulta.Columns["Data"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewConsulta.Columns["NomeAdvogado"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewConsulta.Columns["NomeCliente"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewConsulta.Columns["Id"]!.Visible = false;
+            //dataGridViewConsulta.Columns["AdvogadoId"]!.Visible = false;
+            //dataGridViewConsulta.Columns["ClienteId"]!.Visible = false;
         }
-
     }
 }

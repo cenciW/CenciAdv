@@ -61,7 +61,6 @@ namespace CenciAdv.App.Infra
             Services.AddTransient<CadastroCidade, CadastroCidade>();
             Services.AddTransient<CadastroCliente, CadastroCliente>();
             Services.AddTransient<CadastroConsulta, CadastroConsulta>();
-            //Services.AddTransient<CadastroVenda, CadastroVenda>();
 
             // Mapping
             Services.AddSingleton(new MapperConfiguration(config =>
@@ -72,8 +71,8 @@ namespace CenciAdv.App.Infra
                     .ForMember(d => d.NomeEstado, d => d.MapFrom(x => $"{x.Nome}/{x.Estado}"));
 
                 config.CreateMap<Cliente, ClienteModel>()
-                    .ForMember(d => d.Cidade, d => d.MapFrom(x => $"{x.Cidade!.Nome}/{x.Cidade!.Estado}"))
-                    .ForMember(d => d.IdCidade, d => d.MapFrom(x => x.Cidade!.Id))
+                    .ForMember(d => d.NomeCidade, d => d.MapFrom(x => $"{x.Cidade!.Nome}/{x.Cidade!.Estado}"))
+                    .ForMember(d => d.CidadeId, d => d.MapFrom(x => x.Cidade!.Id))
                     .ForMember(d => d.NomeFone, d => d.MapFrom(x => $"{x.Nome}/{x.Telefone}"));
                     
 
