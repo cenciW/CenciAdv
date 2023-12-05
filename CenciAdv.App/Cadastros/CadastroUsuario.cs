@@ -85,6 +85,12 @@ namespace CenciAdv.App.Cadastros
             dataGridViewConsulta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
+        // Antes de chamar este método, configure as colunas do DataGridView
+        // com os nomes originais dos campos que você está usando, por exemplo:
+        // dataGridView1.Columns.Add("Id", "Id");
+        // dataGridView1.Columns.Add("Nome", "Nome");
+        // ...
+
         protected override void CarregaRegistro(DataGridViewRow? linha)
         {
             txtId.Text = linha?.Cells["Id"].Value.ToString();
@@ -101,7 +107,12 @@ namespace CenciAdv.App.Cadastros
             txtDataLogin.Text = DateTime.TryParse(linha?.Cells["DataLogin"].Value.ToString(), out var dataL)
                 ? dataL.ToString("g")
                 : "";
+
+            dataGridViewConsulta.Columns["DataCadastro"].HeaderText = "Data de Cadastro";
+            dataGridViewConsulta.Columns["DataLogin"].HeaderText = "Data de Login";
+
         }
+
 
     }
 }

@@ -98,18 +98,25 @@ namespace CenciAdv.App.Cadastros
             clientes = _clienteService.Get<ClienteModel>(new[] { "Cidade" }).ToList();
             dataGridViewConsulta.DataSource = clientes;
             dataGridViewConsulta.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewConsulta.Columns["IdCidade"]!.Visible = false;
+            dataGridViewConsulta.Columns["CidadeId"]!.Visible = false;
+
+            dataGridViewConsulta.Columns["Id"].Visible = false;
+            dataGridViewConsulta.Columns["Cpf"].HeaderText = "CPF";
+            dataGridViewConsulta.Columns["NomeCidade"].HeaderText = "Cidade / Estado";
+            dataGridViewConsulta.Columns["NomeFone"].HeaderText = "Nome / Telefone";
         }
 
         protected override void CarregaRegistro(DataGridViewRow? linha)
         {
-            txtId.Text = linha?.Cells["id"].Value.ToString();
+            txtId.Text = linha?.Cells["Id"].Value.ToString();
             txtCpf.Text = linha?.Cells["Cpf"].Value.ToString();
             txtTelefone.Text = linha?.Cells["Telefone"].Value.ToString();
             txtNome.Text = linha?.Cells["Nome"].Value.ToString();
             txtEndereco.Text = linha?.Cells["Endereco"].Value.ToString();
             txtBairro.Text = linha?.Cells["Bairro"].Value.ToString();
             cboCidade.SelectedValue = linha?.Cells["IdCidade"].Value;
+
+
         }
 
         private void tabPageCadastro_Click(object sender, EventArgs e)

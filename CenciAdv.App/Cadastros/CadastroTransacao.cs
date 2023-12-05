@@ -6,6 +6,7 @@ using CenciAdv.Service.Validators;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -53,6 +54,9 @@ namespace CenciAdv.App.Cadastros
             transacao.DescricaoTransacao = txtDescricaoTransacao.Text;
             transacao.DataTransacao = dateTimePicker1.Value;
 
+
+            transacao.ClassificacaoTransacao = (ClassificacaoTransacao)cboTiposTransacao.SelectedItem;
+
             if (radReceita.Checked == true)
                 transacao.TipoTransacao = true;
             if (radReceita.Checked == true)
@@ -68,6 +72,7 @@ namespace CenciAdv.App.Cadastros
                     if (int.TryParse(txtId.Text, out var id))
                     {
                         var transacao = _transacaoService.GetById<Transacao>(id);
+                        transacao.Advogado = FormPrincipal.Usuario;
                         PreencheObjeto(transacao);
                         transacao = _transacaoService.Update<Transacao, Transacao, TransacaoValidator>(transacao);
                     }
@@ -100,12 +105,70 @@ namespace CenciAdv.App.Cadastros
             }
         }
 
+        // no cliente eu tenho cidade
+        // no usuaario eu tenho transacao
         protected override void CarregaGrid()
         {
-            transacoes = _transacaoService.Get<TransacaoModel>(new[] { "Transacao" }).ToList();
+            transacoes = _transacaoService.Get<TransacaoModel>().ToList();
             dataGridViewConsulta.DataSource = transacoes;
             dataGridViewConsulta.Columns["Id"]!.Visible = false;
-            dataGridViewConsulta.Columns["IdTransacao"]!.Visible = false;
+
+
+            dataGridViewConsulta.Columns["DataTransacao"].HeaderText = "Data da transação";
+            dataGridViewConsulta.Columns["DescricaoTransacao"].HeaderText = "Descrição";
+            dataGridViewConsulta.Columns["IdAdvogado"].Visible = false;
+            dataGridViewConsulta.Columns["NomeAdvogado"].HeaderText = "Advogado";
+            dataGridViewConsulta.Columns["CodAgrupamento"].HeaderText = "Código do Agrupamento";
+            dataGridViewConsulta.Columns["NomeAgrupamento"].HeaderText = "Nome do Agrupamento";
+            dataGridViewConsulta.Columns["TipoAgrupamento"].Visible = false;
+            dataGridViewConsulta.Columns["TipoTransacao"].Visible = false;
+
+            /* NAO FUNCIONA ESSA BUCETA
+            DataGridViewTextBoxColumn colunaTipoTransacaoTexto = new DataGridViewTextBoxColumn
+            {
+                Name = "TipoTransacaoTxt",
+                HeaderText = "Tipo da Transação"
+            };
+
+            // Adicione a nova coluna ao DataGridView
+            dataGridViewConsulta.Columns.Add(colunaTipoTransacaoTexto);
+
+            foreach (DataGridViewRow linha in dataGridViewConsulta.Rows)
+            {
+                DataGridViewCell tipoTransacaoCell = linha.Cells["TipoTransacaoTxt"];
+
+                // Verifica se a célula já foi adicionada (pode ser feito de várias maneiras dependendo do contexto)
+                if (tipoTransacaoCell != null)
+                {
+                    if (linha.Cells["TipoTransacao"].Value != null && linha.Cells["TipoTransacao"].Value is bool)
+                    {
+                        bool valorTipoTransacao = (bool)linha.Cells["TipoTransacao"].Value;
+
+                        // Adicione uma instrução de depuração para verificar os valores reais
+                        Console.WriteLine($"Valor real da célula: {valorTipoTransacao}");
+
+                        // Configurar o texto da célula com base no valor
+                        if (valorTipoTransacao)
+                        {
+                            tipoTransacaoCell.Value = "Receita";
+                        }
+                        else
+                        {
+                            tipoTransacaoCell.Value = "Despesa";
+                        }
+                    }
+                }
+            }
+            */
+
+            transacoes = _transacaoService.Get<TransacaoModel>(new List<string> { "Advogado", "ClassificacaoTransacao" }).ToList();
+            dataGridViewConsulta.DataSource = transacoes;
+            dataGridViewConsulta.Columns["DataTransacao"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewConsulta.Columns["NomeAdvogado"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            dataGridViewConsulta.Columns["CodAgrupamento"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewConsulta.Columns["NomeAgrupamento"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
         }
         protected override void CarregaRegistro(DataGridViewRow? linha)
         {
@@ -113,8 +176,6 @@ namespace CenciAdv.App.Cadastros
             txtDescricaoTransacao.Text = linha?.Cells["DescricaoTransacao"].Value.ToString();
             txtNomeAdvogado.Text = linha?.Cells["NomeAdvogado"].Value.ToString();
             txtValorTransacao.Text = linha?.Cells["ValorTransacao"].Value.ToString();
-
-
         }
 
     }

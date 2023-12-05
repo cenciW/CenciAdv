@@ -10,6 +10,7 @@ namespace CenciAdv.App.Models
 {
     public class TransacaoModel
     {
+        public int Id { get; set; }
         public float Valor { get; set; }
         public DateTime? DataTransacao { get; set; }
         //1 - Receita

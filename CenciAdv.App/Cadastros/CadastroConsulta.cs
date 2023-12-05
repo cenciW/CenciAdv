@@ -114,14 +114,18 @@ namespace CenciAdv.App.Cadastros
         protected override void CarregaGrid()
         {
            
-            consultas = _consultaService.Get<ConsultaModel>().ToList();
+            consultas = _consultaService.Get<ConsultaModel>(new List<string> {"Advogado", "Cliente" } ).ToList();
             dataGridViewConsulta.DataSource = consultas;
             dataGridViewConsulta.Columns["Data"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewConsulta.Columns["NomeAdvogado"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewConsulta.Columns["NomeCliente"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewConsulta.Columns["Id"]!.Visible = false;
-            //dataGridViewConsulta.Columns["AdvogadoId"]!.Visible = false;
-            //dataGridViewConsulta.Columns["ClienteId"]!.Visible = false;
+            dataGridViewConsulta.Columns["IdAdvogado"]!.Visible = false;
+            dataGridViewConsulta.Columns["IdCliente"]!.Visible = false;
+
+            dataGridViewConsulta.Columns["NomeAdvogado"].HeaderText = "Nome do Advogado";
+            dataGridViewConsulta.Columns["NomeCliente"].HeaderText = "Nome do Cliente";
+            dataGridViewConsulta.Columns["Data"].HeaderText = "Data da Consulta";
         }
     }
 }

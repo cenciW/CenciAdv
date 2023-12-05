@@ -23,7 +23,7 @@ namespace CenciAdv.App.Cadastros
 
         public CadastroTiposTransacao(IBaseService<ClassificacaoTransacao> clasTransService)
         {
-            _clasTransService= clasTransService;
+            _clasTransService = clasTransService;
             InitializeComponent();
 
         }
@@ -33,9 +33,14 @@ namespace CenciAdv.App.Cadastros
             ct.CodAgrupamento = txtCodAgrup.Text;
             ct.NomeAgrupamento = txtNomeAgrup.Text;
             if (radReceita.Checked == true)
+            {
                 ct.Tipo = true;
-            if (radReceita.Checked == true)
+            }
+            else if (radReceita.Checked == false) 
+            {
                 ct.Tipo = false;
+            }
+                
 
         }
 
@@ -91,6 +96,10 @@ namespace CenciAdv.App.Cadastros
             dataGridViewConsulta.Columns["CodAgrupamento"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewConsulta.Columns["NomeAgrupamento"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewConsulta.Columns["Tipo"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            dataGridViewConsulta.Columns["CodAgrupamento"].HeaderText = "Código do Agrupamento";
+            dataGridViewConsulta.Columns["NomeAgrupamento"].HeaderText = "Nome do Agrupamento";
+
         }
 
         protected override void CarregaRegistro(DataGridViewRow? linha)
@@ -98,12 +107,15 @@ namespace CenciAdv.App.Cadastros
             txtId.Text = linha?.Cells["Id"].Value.ToString();
             txtCodAgrup.Text = linha?.Cells["CodAgrupamento"].Value.ToString();
             txtNomeAgrup.Text = linha?.Cells["NomeAgrupamento"].Value.ToString();
-            if(radReceita.Checked)
-            {
 
+            
+
+            if (radReceita.Checked)
+            {
+                
             }
 
-            if(radDespesa.Checked)
+            if (radDespesa.Checked)
             {
 
             }

@@ -70,6 +70,7 @@ namespace CenciAdv.App.Cadastros
             cidades = _cidadeService.Get<Cidade>().ToList();
             dataGridViewConsulta.DataSource = cidades;
             dataGridViewConsulta.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewConsulta.Columns["Id"].Visible = false;
         }
 
         protected override void CarregaRegistro(DataGridViewRow? linha)
@@ -77,6 +78,8 @@ namespace CenciAdv.App.Cadastros
             txtId.Text = linha?.Cells["Id"].Value.ToString();
             txtNome.Text = linha?.Cells["Nome"].Value.ToString();
             cboEstado.Text = linha?.Cells["Estado"].Value.ToString();
+
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
