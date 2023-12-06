@@ -140,7 +140,7 @@ namespace CenciAdv.App.Base
 
         private void tabPageConsulta_Enter(object sender, EventArgs e)
         {
-            CarregaGrid();  
+            CarregaGrid();
         }
 
         private void dataGridViewConsulta_CellContentClick(object sender, DataGridViewCellEventArgs e)

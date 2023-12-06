@@ -19,7 +19,7 @@ namespace CenciAdv.App.Cadastros
     {
         private readonly IBaseService<Cliente> _clienteService;
         private readonly IBaseService<Cidade> _cidadeService;
-        
+
         private List<ClienteModel>? clientes;
 
         public CadastroCliente(IBaseService<Cliente> clienteService, IBaseService<Cidade> cidadeService)
@@ -40,8 +40,8 @@ namespace CenciAdv.App.Cadastros
         private void PreencheObjeto(Cliente cliente)
         {
             cliente.Nome = txtNome.Text;
-            cliente.Cpf= txtCpf.Text;
-            cliente.Telefone= txtTelefone.Text;
+            cliente.Cpf = txtCpf.Text;
+            cliente.Telefone = txtTelefone.Text;
             cliente.Endereco = txtEndereco.Text;
             cliente.Bairro = txtBairro.Text;
 
@@ -99,11 +99,11 @@ namespace CenciAdv.App.Cadastros
             dataGridViewConsulta.DataSource = clientes;
             dataGridViewConsulta.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewConsulta.Columns["CidadeId"]!.Visible = false;
+            dataGridViewConsulta.Columns["NomeFone"]!.Visible = false;
 
             dataGridViewConsulta.Columns["Id"].Visible = false;
             dataGridViewConsulta.Columns["Cpf"].HeaderText = "CPF";
             dataGridViewConsulta.Columns["NomeCidade"].HeaderText = "Cidade / Estado";
-            dataGridViewConsulta.Columns["NomeFone"].HeaderText = "Nome / Telefone";
         }
 
         protected override void CarregaRegistro(DataGridViewRow? linha)

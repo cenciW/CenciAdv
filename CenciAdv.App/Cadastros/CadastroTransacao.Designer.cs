@@ -45,7 +45,7 @@
             // 
             // materialTabControl
             // 
-            materialTabControl.Size = new Size(813, 371);
+            materialTabControl.Size = new Size(794, 371);
             // 
             // tabPageCadastro
             // 
@@ -58,7 +58,7 @@
             tabPageCadastro.Controls.Add(cboTiposTransacao);
             tabPageCadastro.Controls.Add(txtDescricaoTransacao);
             tabPageCadastro.Controls.Add(txtId);
-            tabPageCadastro.Size = new Size(805, 336);
+            tabPageCadastro.Size = new Size(786, 336);
             tabPageCadastro.Controls.SetChildIndex(panel1, 0);
             tabPageCadastro.Controls.SetChildIndex(txtId, 0);
             tabPageCadastro.Controls.SetChildIndex(txtDescricaoTransacao, 0);
@@ -72,16 +72,12 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(500, 6);
-            // 
-            // btnSalvar
-            // 
-            btnSalvar.Location = new Point(624, 6);
+            btnCancelar.Location = new Point(498, 6);
             // 
             // panel1
             // 
             panel1.Location = new Point(3, 285);
-            panel1.Size = new Size(799, 48);
+            panel1.Size = new Size(780, 48);
             // 
             // imageList1
             // 
@@ -101,7 +97,7 @@
             txtId.HideSelection = true;
             txtId.Hint = "Id";
             txtId.LeadingIcon = null;
-            txtId.Location = new Point(688, 8);
+            txtId.Location = new Point(656, 11);
             txtId.MaxLength = 32767;
             txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtId.Name = "txtId";
@@ -166,11 +162,11 @@
             cboTiposTransacao.Hint = "Tipo Transacao";
             cboTiposTransacao.IntegralHeight = false;
             cboTiposTransacao.ItemHeight = 43;
-            cboTiposTransacao.Location = new Point(463, 216);
+            cboTiposTransacao.Location = new Point(456, 218);
             cboTiposTransacao.MaxDropDownItems = 4;
             cboTiposTransacao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cboTiposTransacao.Name = "cboTiposTransacao";
-            cboTiposTransacao.Size = new Size(334, 49);
+            cboTiposTransacao.Size = new Size(292, 49);
             cboTiposTransacao.StartIndex = 0;
             cboTiposTransacao.TabIndex = 24;
             // 
@@ -209,7 +205,7 @@
             // 
             radDespesa.AutoSize = true;
             radDespesa.Depth = 0;
-            radDespesa.Location = new Point(681, 86);
+            radDespesa.Location = new Point(652, 89);
             radDespesa.Margin = new Padding(0);
             radDespesa.MouseLocation = new Point(-1, -1);
             radDespesa.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -226,7 +222,7 @@
             // 
             radReceita.AutoSize = true;
             radReceita.Depth = 0;
-            radReceita.Location = new Point(683, 129);
+            radReceita.Location = new Point(654, 132);
             radReceita.Margin = new Padding(0);
             radReceita.MouseLocation = new Point(-1, -1);
             radReceita.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -297,7 +293,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(819, 438);
+            ClientSize = new Size(800, 438);
             Location = new Point(0, 0);
             Name = "CadastroTransacao";
             Text = "Cadastro de Transações";

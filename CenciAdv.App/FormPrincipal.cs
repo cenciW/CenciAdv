@@ -112,5 +112,10 @@ namespace CenciAdv.App
         {
             Exibeformulario<CadastroTiposTransacao>();
         }
+
+        private void filtrarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Exibeformulario<ListarTransacoes>();
+        }
     }
 }

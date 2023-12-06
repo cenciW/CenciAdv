@@ -113,8 +113,8 @@ namespace CenciAdv.App.Cadastros
 
         protected override void CarregaGrid()
         {
-           
-            consultas = _consultaService.Get<ConsultaModel>(new List<string> {"Advogado", "Cliente" } ).ToList();
+
+            consultas = _consultaService.Get<ConsultaModel>(new List<string> { "Advogado", "Cliente" }).ToList();
             dataGridViewConsulta.DataSource = consultas;
             dataGridViewConsulta.Columns["Data"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewConsulta.Columns["NomeAdvogado"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;

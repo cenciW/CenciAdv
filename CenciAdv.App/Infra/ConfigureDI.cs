@@ -61,6 +61,7 @@ namespace CenciAdv.App.Infra
             Services.AddTransient<CadastroCidade, CadastroCidade>();
             Services.AddTransient<CadastroCliente, CadastroCliente>();
             Services.AddTransient<CadastroConsulta, CadastroConsulta>();
+            Services.AddTransient<ListarTransacoes, ListarTransacoes>();
 
             // Mapping
             Services.AddSingleton(new MapperConfiguration(config =>

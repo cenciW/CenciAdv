@@ -57,11 +57,11 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(396, 6);
+            btnCancelar.Location = new Point(428, 6);
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(520, 6);
+            btnSalvar.Location = new Point(552, 6);
             // 
             // panel1
             // 
@@ -132,7 +132,7 @@
             txtId.HideSelection = true;
             txtId.Hint = "Id";
             txtId.LeadingIcon = null;
-            txtId.Location = new Point(697, 20);
+            txtId.Location = new Point(702, 6);
             txtId.MaxLength = 32767;
             txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtId.Name = "txtId";
@@ -154,11 +154,11 @@
             // dateTimePicker1
             // 
             dateTimePicker1.CustomFormat = "dd/MM/yyyy HH:mm";
-            dateTimePicker1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            dateTimePicker1.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.Location = new Point(15, 6);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(658, 43);
+            dateTimePicker1.Size = new Size(658, 47);
             dateTimePicker1.TabIndex = 14;
             // 
             // CadastroConsulta

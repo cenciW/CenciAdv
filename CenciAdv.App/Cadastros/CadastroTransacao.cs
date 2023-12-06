@@ -58,9 +58,14 @@ namespace CenciAdv.App.Cadastros
             transacao.ClassificacaoTransacao = (ClassificacaoTransacao)cboTiposTransacao.SelectedItem;
 
             if (radReceita.Checked == true)
+            {
                 transacao.TipoTransacao = true;
-            if (radReceita.Checked == true)
+            }
+            else if (radDespesa.Checked == false)
+            {
                 transacao.TipoTransacao = false;
+            }
+
 
         }
         protected override void Salvar()
@@ -125,43 +130,37 @@ namespace CenciAdv.App.Cadastros
 
 
 
-            DataGridViewTextBoxColumn colunaTipoTransacaoTexto = new DataGridViewTextBoxColumn
+            // Adicione a nova coluna ao DataGridView (se ainda não foi adicionada)
+            if (!dataGridViewConsulta.Columns.Contains("TipoTransacaoTxt"))
             {
-                Name = "TipoTransacaoTxt",
-                HeaderText = "Tipo da Transação",
+                DataGridViewTextBoxColumn colunaTipoTransacaoTexto = new DataGridViewTextBoxColumn
+                {
+                    Name = "TipoTransacaoTxt",
+                    HeaderText = "Tipo da Transação",
+                    ValueType = typeof(string), // Set the value type to string
+                };
 
-            };
-
-            // Adicione a nova coluna ao DataGridView
-            dataGridViewConsulta.Columns.Add(colunaTipoTransacaoTexto);
+                dataGridViewConsulta.Columns.Add(colunaTipoTransacaoTexto);
+            }
 
             foreach (DataGridViewRow linha in dataGridViewConsulta.Rows)
             {
-                DataGridViewCell tipoTransacaoCell = linha.Cells["TipoTransacaoTxt"];
+                DataGridViewCell tipoTransacaoCell = linha.Cells["TipoTransacao"];
 
-                // Verifica se a célula já foi adicionada (pode ser feito de várias maneiras dependendo do contexto)
                 if (tipoTransacaoCell != null)
                 {
-                    if (linha.Cells["TipoTransacao"].Value != null && linha.Cells["TipoTransacao"].Value is bool)
+                    if ((bool)linha.Cells["TipoTransacao"].Value == true)
                     {
-                        bool valorTipoTransacao = (bool)linha.Cells["TipoTransacao"].Value;
-
-                        // Adicione uma instrução de depuração para verificar os valores reais
-                        Console.WriteLine($"Valor real da célula: {valorTipoTransacao}");
-
-                        // Configurar o texto da célula com base no valor
-                        if (valorTipoTransacao)
-                        {
-                            tipoTransacaoCell.Value = "Receita";
-                        }
-                        else
-                        {
-                            tipoTransacaoCell.Value = "Despesa";
-                        }
+                        linha.Cells["TipoTransacaoTxt"].Value = "Receita";
                     }
+                    else
+                        linha.Cells["TipoTransacaoTxt"].Value = "Despesa";
                 }
             }
-            
+
+
+
+
 
             transacoes = _transacaoService.Get<TransacaoModel>(new List<string> { "Advogado", "ClassificacaoTransacao" }).ToList();
             dataGridViewConsulta.DataSource = transacoes;
@@ -179,7 +178,7 @@ namespace CenciAdv.App.Cadastros
             txtId.Text = linha?.Cells["Id"].Value.ToString();
             txtDescricaoTransacao.Text = linha?.Cells["DescricaoTransacao"].Value.ToString();
             txtNomeAdvogado.Text = linha?.Cells["NomeAdvogado"].Value.ToString();
-            txtValorTransacao.Text = linha?.Cells["ValorTransacao"].Value.ToString();
+            txtValorTransacao.Text = linha?.Cells["Valor"].Value.ToString();
         }
 
     }
