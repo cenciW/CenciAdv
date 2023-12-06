@@ -10,6 +10,18 @@ namespace CenciAdv.App.Models
 {
     public class TransacaoModel
     {
+        public TransacaoModel()
+        {
+            if (TipoAgrupamento)
+            {
+                TipoTransacaoTxt = "Receita";
+            }
+            else
+            {
+                TipoTransacaoTxt = "Despesa";
+            }
+        }
+
         public int Id { get; set; }
         public float Valor { get; set; }
         public DateTime? DataTransacao { get; set; }

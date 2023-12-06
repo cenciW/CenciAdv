@@ -59,6 +59,7 @@
             tabPageCadastro.Controls.Add(txtDescricaoTransacao);
             tabPageCadastro.Controls.Add(txtId);
             tabPageCadastro.Size = new Size(786, 336);
+            tabPageCadastro.Enter += tabPageCadastro_Enter;
             tabPageCadastro.Controls.SetChildIndex(panel1, 0);
             tabPageCadastro.Controls.SetChildIndex(txtId, 0);
             tabPageCadastro.Controls.SetChildIndex(txtDescricaoTransacao, 0);
@@ -72,7 +73,11 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(498, 6);
+            btnCancelar.Location = new Point(525, 6);
+            // 
+            // btnSalvar
+            // 
+            btnSalvar.Location = new Point(649, 6);
             // 
             // panel1
             // 

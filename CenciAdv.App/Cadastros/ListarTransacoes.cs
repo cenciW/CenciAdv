@@ -91,7 +91,6 @@ namespace CenciAdv.App.Cadastros
             {
                 var dataInicio = dateTimePickerInicial.Value;
                 var dataFinal = dateTimePickerFinal.Value;
-                //transacoes = _transacaoService.Get<TransacaoModel>(new List<string> { "Advogado", "ClassificacaoTransacao" }).ToList();
                 transacoes = transacoes
                     .Where(x => x.DataTransacao >= dataInicio && x.DataTransacao <= dataFinal)
                     .ToList();

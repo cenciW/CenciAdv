@@ -159,9 +159,6 @@ namespace CenciAdv.App.Cadastros
             }
 
 
-
-
-
             transacoes = _transacaoService.Get<TransacaoModel>(new List<string> { "Advogado", "ClassificacaoTransacao" }).ToList();
             dataGridViewConsulta.DataSource = transacoes;
             dataGridViewConsulta.Columns["DataTransacao"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -181,5 +178,9 @@ namespace CenciAdv.App.Cadastros
             txtValorTransacao.Text = linha?.Cells["Valor"].Value.ToString();
         }
 
+        private void tabPageCadastro_Enter(object sender, EventArgs e)
+        {
+            txtNomeAdvogado.Text = FormPrincipal.Usuario.Nome;
+        }
     }
 }
