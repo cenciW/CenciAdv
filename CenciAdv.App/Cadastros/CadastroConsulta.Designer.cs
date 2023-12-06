@@ -36,11 +36,12 @@
             materialTabControl.SuspendLayout();
             tabPageCadastro.SuspendLayout();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // materialTabControl
             // 
-            materialTabControl.Size = new Size(805, 349);
+            materialTabControl.Size = new Size(846, 331);
             // 
             // tabPageCadastro
             // 
@@ -48,7 +49,7 @@
             tabPageCadastro.Controls.Add(txtId);
             tabPageCadastro.Controls.Add(cboCliente);
             tabPageCadastro.Controls.Add(cboAdvogado);
-            tabPageCadastro.Size = new Size(797, 314);
+            tabPageCadastro.Size = new Size(838, 296);
             tabPageCadastro.Controls.SetChildIndex(cboAdvogado, 0);
             tabPageCadastro.Controls.SetChildIndex(cboCliente, 0);
             tabPageCadastro.Controls.SetChildIndex(txtId, 0);
@@ -57,22 +58,26 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(428, 6);
+            btnCancelar.Location = new Point(513, 6);
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(552, 6);
+            btnSalvar.Location = new Point(637, 6);
             // 
             // panel1
             // 
-            panel1.Location = new Point(3, 263);
-            panel1.Size = new Size(791, 48);
+            panel1.Location = new Point(3, 245);
+            panel1.Size = new Size(832, 48);
             // 
             // imageList1
             // 
             imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
             imageList1.Images.SetKeyName(0, "form.png");
             imageList1.Images.SetKeyName(1, "search.png");
+            // 
+            // panel2
+            // 
+            panel2.Location = new Point(59, 227);
             // 
             // cboAdvogado
             // 
@@ -165,7 +170,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(811, 416);
+            ClientSize = new Size(852, 398);
             Location = new Point(0, 0);
             Name = "CadastroConsulta";
             Text = "Cadastro de Consultas";
@@ -174,6 +179,8 @@
             tabPageCadastro.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 

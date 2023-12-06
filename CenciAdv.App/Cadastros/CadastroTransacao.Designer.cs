@@ -41,6 +41,7 @@
             materialTabControl.SuspendLayout();
             tabPageCadastro.SuspendLayout();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // materialTabControl
@@ -73,11 +74,11 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(525, 6);
+            btnCancelar.Location = new Point(552, 6);
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(649, 6);
+            btnSalvar.Location = new Point(676, 6);
             // 
             // panel1
             // 
@@ -89,6 +90,10 @@
             imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
             imageList1.Images.SetKeyName(0, "form.png");
             imageList1.Images.SetKeyName(1, "search.png");
+            // 
+            // panel2
+            // 
+            panel2.Location = new Point(33, 285);
             // 
             // txtId
             // 
@@ -307,6 +312,8 @@
             tabPageCadastro.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 

@@ -277,16 +277,16 @@
 
         #endregion
         protected ReaLTaiizor.Controls.MaterialTabControl materialTabControl;
-        private TabPage tabPageConsulta;
         protected TabPage tabPageCadastro;
         protected ReaLTaiizor.Controls.MaterialButton btnCancelar;
         protected ReaLTaiizor.Controls.MaterialButton btnSalvar;
         protected Panel panel1;
-        public DataGridView dataGridViewConsulta;
         protected ImageList imageList1;
-        private Panel panel2;
         public ReaLTaiizor.Controls.MaterialButton btnExcluir;
         public ReaLTaiizor.Controls.MaterialButton btnEditar;
         public ReaLTaiizor.Controls.MaterialButton btnNovo;
+        protected Panel panel2;
+        protected TabPage tabPageConsulta;
+        protected DataGridView dataGridViewConsulta;
     }
 }
