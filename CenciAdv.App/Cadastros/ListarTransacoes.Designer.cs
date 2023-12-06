@@ -47,11 +47,11 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 403);
+            dataGridView1.Location = new Point(6, 373);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(788, 282);
+            dataGridView1.Size = new Size(788, 312);
             dataGridView1.TabIndex = 0;
             // 
             // btnFiltrar
@@ -64,7 +64,7 @@
             btnFiltrar.HighEmphasis = true;
             btnFiltrar.Icon = null;
             btnFiltrar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnFiltrar.Location = new Point(526, 259);
+            btnFiltrar.Location = new Point(526, 275);
             btnFiltrar.Margin = new Padding(4, 6, 4, 6);
             btnFiltrar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnFiltrar.Name = "btnFiltrar";
@@ -101,7 +101,7 @@
             // 
             rdbReceita.AutoSize = true;
             rdbReceita.Depth = 0;
-            rdbReceita.Location = new Point(107, 299);
+            rdbReceita.Location = new Point(107, 300);
             rdbReceita.Margin = new Padding(0);
             rdbReceita.MouseLocation = new Point(-1, -1);
             rdbReceita.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -118,7 +118,7 @@
             // 
             rdbDespesa.AutoSize = true;
             rdbDespesa.Depth = 0;
-            rdbDespesa.Location = new Point(6, 299);
+            rdbDespesa.Location = new Point(6, 300);
             rdbDespesa.Margin = new Padding(0);
             rdbDespesa.MouseLocation = new Point(-1, -1);
             rdbDespesa.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -135,7 +135,7 @@
             // 
             rdbTudo.AutoSize = true;
             rdbTudo.Depth = 0;
-            rdbTudo.Location = new Point(6, 262);
+            rdbTudo.Location = new Point(6, 263);
             rdbTudo.Margin = new Padding(0);
             rdbTudo.MouseLocation = new Point(-1, -1);
             rdbTudo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -152,7 +152,7 @@
             // 
             checkBoxIncluirData.AutoSize = true;
             checkBoxIncluirData.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBoxIncluirData.Location = new Point(526, 196);
+            checkBoxIncluirData.Location = new Point(526, 193);
             checkBoxIncluirData.Name = "checkBoxIncluirData";
             checkBoxIncluirData.Size = new Size(217, 29);
             checkBoxIncluirData.TabIndex = 20;
@@ -164,7 +164,7 @@
             lblTotalReceitas.AutoSize = true;
             lblTotalReceitas.Depth = 0;
             lblTotalReceitas.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lblTotalReceitas.Location = new Point(6, 379);
+            lblTotalReceitas.Location = new Point(10, 351);
             lblTotalReceitas.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             lblTotalReceitas.Name = "lblTotalReceitas";
             lblTotalReceitas.Size = new Size(106, 19);
@@ -176,7 +176,7 @@
             lblTotalDespesas.AutoSize = true;
             lblTotalDespesas.Depth = 0;
             lblTotalDespesas.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lblTotalDespesas.Location = new Point(198, 379);
+            lblTotalDespesas.Location = new Point(202, 351);
             lblTotalDespesas.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             lblTotalDespesas.Name = "lblTotalDespesas";
             lblTotalDespesas.Size = new Size(115, 19);
@@ -188,7 +188,7 @@
             lblSubTotal.AutoSize = true;
             lblSubTotal.Depth = 0;
             lblSubTotal.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lblSubTotal.Location = new Point(399, 379);
+            lblSubTotal.Location = new Point(403, 351);
             lblSubTotal.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             lblSubTotal.Name = "lblSubTotal";
             lblSubTotal.Size = new Size(104, 19);
@@ -199,7 +199,7 @@
             // 
             checkBoxIncluirAdvogado.AutoSize = true;
             checkBoxIncluirAdvogado.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBoxIncluirAdvogado.Location = new Point(526, 226);
+            checkBoxIncluirAdvogado.Location = new Point(526, 221);
             checkBoxIncluirAdvogado.Name = "checkBoxIncluirAdvogado";
             checkBoxIncluirAdvogado.Size = new Size(267, 29);
             checkBoxIncluirAdvogado.TabIndex = 24;

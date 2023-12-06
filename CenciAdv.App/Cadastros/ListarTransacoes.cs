@@ -109,11 +109,11 @@ namespace CenciAdv.App.Cadastros
 
             if (checkBoxIncluirAdvogado.Checked)
             {
-                
+
                 if (int.TryParse(cboAdvogado.SelectedValue.ToString(), out var idAdvogado))
                 {
                     var adv = _userService.GetById<Usuario>(idAdvogado);
-                    transacoes = transacoes.Where(x=>x.IdAdvogado == adv.Id).ToList();
+                    transacoes = transacoes.Where(x => x.IdAdvogado == adv.Id).ToList();
 
                 }
 

@@ -120,7 +120,7 @@ namespace CenciAdv.App
 
         private void sairToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            Close();
         }
     }
 }
