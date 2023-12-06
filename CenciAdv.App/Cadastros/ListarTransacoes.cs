@@ -59,22 +59,12 @@ namespace CenciAdv.App.Cadastros
             dataGridView1.Columns["NomeAdvogado"].HeaderText = "Advogado";
             dataGridView1.Columns["CodAgrupamento"].HeaderText = "Código do Agrupamento";
             dataGridView1.Columns["NomeAgrupamento"].HeaderText = "Nome do Agrupamento";
+            dataGridView1.Columns["TipoTransacaoTxt"].HeaderText = "Tipo da Transação";
             dataGridView1.Columns["TipoAgrupamento"].Visible = false;
             dataGridView1.Columns["TipoTransacao"].Visible = false;
 
 
 
-            if (!dataGridView1.Columns.Contains("TipoTransacaoTxt"))
-            {
-                DataGridViewTextBoxColumn colunaTipoTransacaoTexto = new DataGridViewTextBoxColumn
-                {
-                    Name = "TipoTransacaoTxt",
-                    HeaderText = "Tipo da Transação",
-                    ValueType = typeof(string), // Set the value type to string
-                };
-
-                dataGridView1.Columns.Add(colunaTipoTransacaoTexto);
-            }
 
             foreach (DataGridViewRow linha in dataGridView1.Rows)
             {

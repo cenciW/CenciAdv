@@ -24,6 +24,7 @@ namespace CenciAdv.App.Models
         public string? CodAgrupamento { get; set; }
         public string? NomeAgrupamento { get; set; }
         public bool TipoAgrupamento { get; set; }
+        public string? TipoTransacaoTxt { get; set; }
 
     }
 }
