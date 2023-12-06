@@ -39,13 +39,15 @@
             lblTotalReceitas = new ReaLTaiizor.Controls.MaterialLabel();
             lblTotalDespesas = new ReaLTaiizor.Controls.MaterialLabel();
             lblSubTotal = new ReaLTaiizor.Controls.MaterialLabel();
+            checkBoxIncluirAdvogado = new CheckBox();
+            cboAdvogado = new ReaLTaiizor.Controls.MaterialComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(5, 337);
+            dataGridView1.Location = new Point(6, 403);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
@@ -54,18 +56,20 @@
             // 
             // btnFiltrar
             // 
+            btnFiltrar.AutoSize = false;
             btnFiltrar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnFiltrar.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             btnFiltrar.Depth = 0;
+            btnFiltrar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnFiltrar.HighEmphasis = true;
             btnFiltrar.Icon = null;
             btnFiltrar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnFiltrar.Location = new Point(705, 211);
+            btnFiltrar.Location = new Point(526, 259);
             btnFiltrar.Margin = new Padding(4, 6, 4, 6);
             btnFiltrar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnFiltrar.Name = "btnFiltrar";
             btnFiltrar.NoAccentTextColor = Color.Empty;
-            btnFiltrar.Size = new Size(88, 36);
+            btnFiltrar.Size = new Size(267, 51);
             btnFiltrar.TabIndex = 1;
             btnFiltrar.Text = "&Filtrar";
             btnFiltrar.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -97,7 +101,7 @@
             // 
             rdbReceita.AutoSize = true;
             rdbReceita.Depth = 0;
-            rdbReceita.Location = new Point(6, 210);
+            rdbReceita.Location = new Point(107, 299);
             rdbReceita.Margin = new Padding(0);
             rdbReceita.MouseLocation = new Point(-1, -1);
             rdbReceita.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -114,7 +118,7 @@
             // 
             rdbDespesa.AutoSize = true;
             rdbDespesa.Depth = 0;
-            rdbDespesa.Location = new Point(104, 210);
+            rdbDespesa.Location = new Point(6, 299);
             rdbDespesa.Margin = new Padding(0);
             rdbDespesa.MouseLocation = new Point(-1, -1);
             rdbDespesa.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -131,7 +135,7 @@
             // 
             rdbTudo.AutoSize = true;
             rdbTudo.Depth = 0;
-            rdbTudo.Location = new Point(220, 210);
+            rdbTudo.Location = new Point(6, 262);
             rdbTudo.Margin = new Padding(0);
             rdbTudo.MouseLocation = new Point(-1, -1);
             rdbTudo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -148,7 +152,7 @@
             // 
             checkBoxIncluirData.AutoSize = true;
             checkBoxIncluirData.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBoxIncluirData.Location = new Point(428, 218);
+            checkBoxIncluirData.Location = new Point(526, 196);
             checkBoxIncluirData.Name = "checkBoxIncluirData";
             checkBoxIncluirData.Size = new Size(217, 29);
             checkBoxIncluirData.TabIndex = 20;
@@ -160,7 +164,7 @@
             lblTotalReceitas.AutoSize = true;
             lblTotalReceitas.Depth = 0;
             lblTotalReceitas.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lblTotalReceitas.Location = new Point(6, 299);
+            lblTotalReceitas.Location = new Point(6, 379);
             lblTotalReceitas.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             lblTotalReceitas.Name = "lblTotalReceitas";
             lblTotalReceitas.Size = new Size(106, 19);
@@ -172,7 +176,7 @@
             lblTotalDespesas.AutoSize = true;
             lblTotalDespesas.Depth = 0;
             lblTotalDespesas.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lblTotalDespesas.Location = new Point(220, 299);
+            lblTotalDespesas.Location = new Point(198, 379);
             lblTotalDespesas.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             lblTotalDespesas.Name = "lblTotalDespesas";
             lblTotalDespesas.Size = new Size(115, 19);
@@ -184,18 +188,55 @@
             lblSubTotal.AutoSize = true;
             lblSubTotal.Depth = 0;
             lblSubTotal.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lblSubTotal.Location = new Point(446, 299);
+            lblSubTotal.Location = new Point(399, 379);
             lblSubTotal.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             lblSubTotal.Name = "lblSubTotal";
             lblSubTotal.Size = new Size(104, 19);
             lblSubTotal.TabIndex = 23;
             lblSubTotal.Text = "Balanço Total:";
             // 
+            // checkBoxIncluirAdvogado
+            // 
+            checkBoxIncluirAdvogado.AutoSize = true;
+            checkBoxIncluirAdvogado.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxIncluirAdvogado.Location = new Point(526, 226);
+            checkBoxIncluirAdvogado.Name = "checkBoxIncluirAdvogado";
+            checkBoxIncluirAdvogado.Size = new Size(267, 29);
+            checkBoxIncluirAdvogado.TabIndex = 24;
+            checkBoxIncluirAdvogado.Text = "Incluir Advogado na pesquisa";
+            checkBoxIncluirAdvogado.UseVisualStyleBackColor = true;
+            // 
+            // cboAdvogado
+            // 
+            cboAdvogado.AutoResize = false;
+            cboAdvogado.BackColor = Color.FromArgb(255, 255, 255);
+            cboAdvogado.Depth = 0;
+            cboAdvogado.DrawMode = DrawMode.OwnerDrawVariable;
+            cboAdvogado.DropDownHeight = 174;
+            cboAdvogado.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboAdvogado.DropDownWidth = 121;
+            cboAdvogado.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboAdvogado.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboAdvogado.FormattingEnabled = true;
+            cboAdvogado.Hint = "Advogado";
+            cboAdvogado.IntegralHeight = false;
+            cboAdvogado.ItemHeight = 43;
+            cboAdvogado.Items.AddRange(new object[] { "" });
+            cboAdvogado.Location = new Point(6, 196);
+            cboAdvogado.MaxDropDownItems = 4;
+            cboAdvogado.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cboAdvogado.Name = "cboAdvogado";
+            cboAdvogado.Size = new Size(497, 49);
+            cboAdvogado.StartIndex = 0;
+            cboAdvogado.TabIndex = 25;
+            // 
             // ListarTransacoes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 638);
+            ClientSize = new Size(800, 691);
+            Controls.Add(cboAdvogado);
+            Controls.Add(checkBoxIncluirAdvogado);
             Controls.Add(lblSubTotal);
             Controls.Add(lblTotalDespesas);
             Controls.Add(lblTotalReceitas);
@@ -227,5 +268,7 @@
         private ReaLTaiizor.Controls.MaterialLabel lblTotalReceitas;
         private ReaLTaiizor.Controls.MaterialLabel lblTotalDespesas;
         private ReaLTaiizor.Controls.MaterialLabel lblSubTotal;
+        private CheckBox checkBoxIncluirAdvogado;
+        private ReaLTaiizor.Controls.MaterialComboBox cboAdvogado;
     }
 }

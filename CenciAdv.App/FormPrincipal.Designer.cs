@@ -42,8 +42,6 @@
             agendarHorarioToolStripMenuItem = new ToolStripMenuItem();
             relatóriosToolStripMenuItem = new ToolStripMenuItem();
             filtrarToolStripMenuItem1 = new ToolStripMenuItem();
-            ajudaToolStripMenuItem = new ToolStripMenuItem();
-            sobreToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             lblUsuario = new ToolStripStatusLabel();
@@ -53,7 +51,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem, relatóriosToolStripMenuItem, ajudaToolStripMenuItem, sairToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem, relatóriosToolStripMenuItem, sairToolStripMenuItem });
             menuStrip1.Location = new Point(3, 64);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(815, 24);
@@ -134,28 +132,16 @@
             // filtrarToolStripMenuItem1
             // 
             filtrarToolStripMenuItem1.Name = "filtrarToolStripMenuItem1";
-            filtrarToolStripMenuItem1.Size = new Size(180, 22);
+            filtrarToolStripMenuItem1.Size = new Size(164, 22);
             filtrarToolStripMenuItem1.Text = "&Filtrar Transações";
             filtrarToolStripMenuItem1.Click += filtrarToolStripMenuItem1_Click;
-            // 
-            // ajudaToolStripMenuItem
-            // 
-            ajudaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { sobreToolStripMenuItem });
-            ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-            ajudaToolStripMenuItem.Size = new Size(50, 20);
-            ajudaToolStripMenuItem.Text = "&Ajuda";
-            // 
-            // sobreToolStripMenuItem
-            // 
-            sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            sobreToolStripMenuItem.Size = new Size(104, 22);
-            sobreToolStripMenuItem.Text = "&Sobre";
             // 
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Size = new Size(38, 20);
             sairToolStripMenuItem.Text = "&Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click_1;
             // 
             // statusStrip1
             // 
@@ -210,8 +196,6 @@
         private ToolStripMenuItem relatóriosToolStripMenuItem;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel lblUsuario;
-        private ToolStripMenuItem ajudaToolStripMenuItem;
-        private ToolStripMenuItem sobreToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
         private ToolStripMenuItem filtrarToolStripMenuItem1;
         private ToolStripMenuItem adicionarGrupoDeTransaçõesToolStripMenuItem;

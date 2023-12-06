@@ -32,6 +32,15 @@ namespace CenciAdv.App.Cadastros
             InitializeComponent();
             rdbTudo.Checked = true;
 
+            CarregarCombo();
+
+        }
+
+        private void CarregarCombo()
+        {
+            cboAdvogado.ValueMember = "Id";
+            cboAdvogado.DisplayMember = "Nome";
+            cboAdvogado.DataSource = _userService.Get<UsuarioModel>().ToList();
         }
 
 
@@ -86,20 +95,32 @@ namespace CenciAdv.App.Cadastros
             decimal sumReceitas = 0;
             decimal subtotal = 0;
 
+            transacoes = _transacaoService.Get<TransacaoModel>(new List<string> { "Advogado", "ClassificacaoTransacao" }).ToList();
 
             if (checkBoxIncluirData.Checked)
             {
                 var dataInicio = dateTimePickerInicial.Value;
                 var dataFinal = dateTimePickerFinal.Value;
-                transacoes = _transacaoService.Get<TransacaoModel>(new List<string> { "Advogado", "ClassificacaoTransacao" }).ToList();
+                //transacoes = _transacaoService.Get<TransacaoModel>(new List<string> { "Advogado", "ClassificacaoTransacao" }).ToList();
                 transacoes = transacoes
                     .Where(x => x.DataTransacao >= dataInicio && x.DataTransacao <= dataFinal)
                     .ToList();
             }
-            else
+
+            if (checkBoxIncluirAdvogado.Checked)
             {
-                transacoes = _transacaoService.Get<TransacaoModel>(new List<string> { "Advogado", "ClassificacaoTransacao" }).ToList();
+                
+                if (int.TryParse(cboAdvogado.SelectedValue.ToString(), out var idAdvogado))
+                {
+                    var adv = _userService.GetById<Usuario>(idAdvogado);
+                    transacoes = transacoes.Where(x=>x.IdAdvogado == adv.Id).ToList();
+
+                }
+
             }
+
+
+
 
             if (rdbDespesa.Checked)
             {
@@ -114,13 +135,12 @@ namespace CenciAdv.App.Cadastros
                 transacoes = transacoes.Where(x => x.TipoTransacao == true).ToList();
                 sumReceitas = (decimal)transacoes.Sum(x => x.Valor);
                 lblTotalReceitas.Text = "Total Receitas: R$" + sumReceitas.ToString();
-
                 lblSubTotal.Text = "Balanço Total: R$-";
                 lblTotalDespesas.Text = "Total Despesas: R$-";
 
             }
             else if (rdbTudo.Checked)
-            {             
+            {
                 var despesas = transacoes.Where(x => x.TipoTransacao == false).ToList();
                 sumDespesas = (decimal)despesas.Sum(x => x.Valor);
 
@@ -129,14 +149,14 @@ namespace CenciAdv.App.Cadastros
 
                 subtotal = sumReceitas - sumDespesas;
                 lblSubTotal.Text = "Balanço Total: R$" + subtotal.ToString();
-                lblTotalDespesas.Text = "Total Despesas: R$"+sumDespesas;
-                lblTotalReceitas.Text = "Total Receitas: R$"+sumReceitas;
+                lblTotalDespesas.Text = "Total Despesas: R$" + sumDespesas;
+                lblTotalReceitas.Text = "Total Receitas: R$" + sumReceitas;
 
             }
 
 
 
-            
+
 
 
             dataGridView1.DataSource = transacoes;

@@ -117,5 +117,10 @@ namespace CenciAdv.App
         {
             Exibeformulario<ListarTransacoes>();
         }
+
+        private void sairToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
