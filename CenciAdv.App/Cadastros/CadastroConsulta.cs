@@ -31,7 +31,6 @@ namespace CenciAdv.App.Cadastros
         public CadastroConsulta(IBaseService<Cliente> clienteService, IBaseService<Usuario> userService
             , IBaseService<Consulta> consultaService, IBaseService<Cidade> cidadeService)
         {
-            dateTimePicker1.Value = DateTime.UtcNow.ToLocalTime();
             _cidadeService = cidadeService;
             _clienteService = clienteService;
             _userService = userService;
@@ -49,6 +48,9 @@ namespace CenciAdv.App.Cadastros
             cboCliente.ValueMember = "Id";
             cboCliente.DisplayMember = "NomeFone";
             cboCliente.DataSource = _clienteService.Get<ClienteModel>().ToList();
+
+
+            dateTimePicker1.Value = DateTime.UtcNow.ToLocalTime();
         }
 
         private void PreencheObjeto(Consulta consulta)
@@ -67,8 +69,22 @@ namespace CenciAdv.App.Cadastros
             }
 
             consulta.Data = dateTimePicker1.Value;
+
             //consulta.Data = DateTime.UtcNow.ToLocalTime();
 
+        }
+
+        private bool existeConsulta()
+        {
+            var x = _consultaService.Get<Consulta>().Where(x => x.Data == dateTimePicker1.Value).FirstOrDefault();
+            if(x != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         protected override void Salvar()
@@ -86,9 +102,16 @@ namespace CenciAdv.App.Cadastros
                 }
                 else
                 {
-                    var consulta = new Consulta();
-                    PreencheObjeto(consulta);
-                    _consultaService.Add<Consulta, Consulta, ConsultaValidator>(consulta);
+                    if (existeConsulta())
+                    {
+                        MessageBox.Show("Não há como cadastrar duas consultas no mesmo horário.", @"Cenci Adv", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        var consulta = new Consulta();
+                        PreencheObjeto(consulta);
+                        _consultaService.Add<Consulta, Consulta, ConsultaValidator>(consulta);
+                    }
 
                 }
 
