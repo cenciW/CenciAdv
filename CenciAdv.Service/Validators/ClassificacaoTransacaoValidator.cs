@@ -12,6 +12,9 @@ namespace CenciAdv.Service.Validators
                 .NotEmpty().WithMessage("Por favor informe o código do agrupamento.")
                 .NotNull().WithMessage("Por favor informe o código do agrupamento.");
 
+
+            
+
             RuleFor(c => c.NomeAgrupamento)
                 .NotEmpty().WithMessage("Por favor informe o nome do agrupamento.")
                 .NotNull().WithMessage("Por favor informe o nome do agrupamento.");

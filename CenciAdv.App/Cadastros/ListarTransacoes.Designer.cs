@@ -41,13 +41,15 @@
             lblSubTotal = new ReaLTaiizor.Controls.MaterialLabel();
             checkBoxIncluirAdvogado = new CheckBox();
             cboAdvogado = new ReaLTaiizor.Controls.MaterialComboBox();
+            cboTiposTransacao = new ReaLTaiizor.Controls.MaterialComboBox();
+            checkBoxIncluirTipoTransacao = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 373);
+            dataGridView1.Location = new Point(6, 417);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
@@ -64,7 +66,7 @@
             btnFiltrar.HighEmphasis = true;
             btnFiltrar.Icon = null;
             btnFiltrar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnFiltrar.Location = new Point(526, 275);
+            btnFiltrar.Location = new Point(526, 319);
             btnFiltrar.Margin = new Padding(4, 6, 4, 6);
             btnFiltrar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnFiltrar.Name = "btnFiltrar";
@@ -101,7 +103,7 @@
             // 
             rdbReceita.AutoSize = true;
             rdbReceita.Depth = 0;
-            rdbReceita.Location = new Point(107, 300);
+            rdbReceita.Location = new Point(107, 344);
             rdbReceita.Margin = new Padding(0);
             rdbReceita.MouseLocation = new Point(-1, -1);
             rdbReceita.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -118,7 +120,7 @@
             // 
             rdbDespesa.AutoSize = true;
             rdbDespesa.Depth = 0;
-            rdbDespesa.Location = new Point(6, 300);
+            rdbDespesa.Location = new Point(6, 344);
             rdbDespesa.Margin = new Padding(0);
             rdbDespesa.MouseLocation = new Point(-1, -1);
             rdbDespesa.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -135,7 +137,7 @@
             // 
             rdbTudo.AutoSize = true;
             rdbTudo.Depth = 0;
-            rdbTudo.Location = new Point(6, 263);
+            rdbTudo.Location = new Point(6, 307);
             rdbTudo.Margin = new Padding(0);
             rdbTudo.MouseLocation = new Point(-1, -1);
             rdbTudo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -164,7 +166,7 @@
             lblTotalReceitas.AutoSize = true;
             lblTotalReceitas.Depth = 0;
             lblTotalReceitas.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lblTotalReceitas.Location = new Point(10, 351);
+            lblTotalReceitas.Location = new Point(10, 395);
             lblTotalReceitas.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             lblTotalReceitas.Name = "lblTotalReceitas";
             lblTotalReceitas.Size = new Size(106, 19);
@@ -176,7 +178,7 @@
             lblTotalDespesas.AutoSize = true;
             lblTotalDespesas.Depth = 0;
             lblTotalDespesas.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lblTotalDespesas.Location = new Point(202, 351);
+            lblTotalDespesas.Location = new Point(265, 395);
             lblTotalDespesas.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             lblTotalDespesas.Name = "lblTotalDespesas";
             lblTotalDespesas.Size = new Size(115, 19);
@@ -188,7 +190,7 @@
             lblSubTotal.AutoSize = true;
             lblSubTotal.Depth = 0;
             lblSubTotal.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lblSubTotal.Location = new Point(403, 351);
+            lblSubTotal.Location = new Point(526, 395);
             lblSubTotal.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             lblSubTotal.Name = "lblSubTotal";
             lblSubTotal.Size = new Size(104, 19);
@@ -230,11 +232,47 @@
             cboAdvogado.StartIndex = 0;
             cboAdvogado.TabIndex = 25;
             // 
+            // cboTiposTransacao
+            // 
+            cboTiposTransacao.AutoResize = false;
+            cboTiposTransacao.BackColor = Color.FromArgb(255, 255, 255);
+            cboTiposTransacao.Depth = 0;
+            cboTiposTransacao.DrawMode = DrawMode.OwnerDrawVariable;
+            cboTiposTransacao.DropDownHeight = 174;
+            cboTiposTransacao.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboTiposTransacao.DropDownWidth = 121;
+            cboTiposTransacao.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboTiposTransacao.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboTiposTransacao.FormattingEnabled = true;
+            cboTiposTransacao.Hint = "Agrupamento Transações";
+            cboTiposTransacao.IntegralHeight = false;
+            cboTiposTransacao.ItemHeight = 43;
+            cboTiposTransacao.Location = new Point(6, 255);
+            cboTiposTransacao.MaxDropDownItems = 4;
+            cboTiposTransacao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cboTiposTransacao.Name = "cboTiposTransacao";
+            cboTiposTransacao.Size = new Size(497, 49);
+            cboTiposTransacao.StartIndex = 0;
+            cboTiposTransacao.TabIndex = 26;
+            // 
+            // checkBoxIncluirTipoTransacao
+            // 
+            checkBoxIncluirTipoTransacao.AutoSize = true;
+            checkBoxIncluirTipoTransacao.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxIncluirTipoTransacao.Location = new Point(526, 256);
+            checkBoxIncluirTipoTransacao.Name = "checkBoxIncluirTipoTransacao";
+            checkBoxIncluirTipoTransacao.Size = new Size(214, 29);
+            checkBoxIncluirTipoTransacao.TabIndex = 27;
+            checkBoxIncluirTipoTransacao.Text = "Incluir tipo na pesquisa";
+            checkBoxIncluirTipoTransacao.UseVisualStyleBackColor = true;
+            // 
             // ListarTransacoes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 691);
+            ClientSize = new Size(800, 735);
+            Controls.Add(checkBoxIncluirTipoTransacao);
+            Controls.Add(cboTiposTransacao);
             Controls.Add(cboAdvogado);
             Controls.Add(checkBoxIncluirAdvogado);
             Controls.Add(lblSubTotal);
@@ -249,7 +287,8 @@
             Controls.Add(btnFiltrar);
             Controls.Add(dataGridView1);
             Name = "ListarTransacoes";
-            Text = "Listar as Transações";
+            Text = "Agrupamento Transações";
+            Enter += ListarTransacoes_Enter;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -270,5 +309,7 @@
         private ReaLTaiizor.Controls.MaterialLabel lblSubTotal;
         private CheckBox checkBoxIncluirAdvogado;
         private ReaLTaiizor.Controls.MaterialComboBox cboAdvogado;
+        private ReaLTaiizor.Controls.MaterialComboBox cboTiposTransacao;
+        private CheckBox checkBoxIncluirTipoTransacao;
     }
 }

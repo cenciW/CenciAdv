@@ -31,6 +31,7 @@ namespace CenciAdv.App.Cadastros
         public CadastroConsulta(IBaseService<Cliente> clienteService, IBaseService<Usuario> userService
             , IBaseService<Consulta> consultaService, IBaseService<Cidade> cidadeService)
         {
+            dateTimePicker1.Value = DateTime.UtcNow.ToLocalTime();
             _cidadeService = cidadeService;
             _clienteService = clienteService;
             _userService = userService;

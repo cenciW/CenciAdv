@@ -21,19 +21,24 @@ namespace CenciAdv.App.Cadastros
         private readonly IBaseService<Usuario> _userService;
         private readonly IBaseService<Cidade> _cidadeService;
         private readonly IBaseService<Transacao> _transacaoService;
+        private readonly IBaseService<ClassificacaoTransacao> _clasTransService;
 
         private List<TransacaoModel>? transacoes;
 
-        public ListarTransacoes(IBaseService<Transacao> transacaoService, IBaseService<Cidade> cidadeService, IBaseService<Usuario> userService)
+        public ListarTransacoes(IBaseService<Transacao> transacaoService, IBaseService<Cidade> cidadeService,
+            IBaseService<Usuario> userService, IBaseService<ClassificacaoTransacao> clasTransService)
         {
+
+
+
             _transacaoService = transacaoService;
             _cidadeService = cidadeService;
             _userService = userService;
+            _clasTransService = clasTransService;
             InitializeComponent();
             rdbTudo.Checked = true;
 
             CarregarCombo();
-
         }
 
         private void CarregarCombo()
@@ -41,6 +46,11 @@ namespace CenciAdv.App.Cadastros
             cboAdvogado.ValueMember = "Id";
             cboAdvogado.DisplayMember = "Nome";
             cboAdvogado.DataSource = _userService.Get<UsuarioModel>().ToList();
+
+            cboTiposTransacao.ValueMember = "Id";
+            cboTiposTransacao.DisplayMember = "NomeAgrupamento";
+            cboTiposTransacao.DataSource = _clasTransService.Get<ClassificacaoTransacao>().ToList();
+
         }
 
 
@@ -62,6 +72,7 @@ namespace CenciAdv.App.Cadastros
             dataGridView1.Columns["TipoTransacaoTxt"].HeaderText = "Tipo da Transação";
             dataGridView1.Columns["TipoAgrupamento"].Visible = false;
             dataGridView1.Columns["TipoTransacao"].Visible = false;
+            dataGridView1.Columns["IdAgrupamento"].Visible = false;
 
 
 
@@ -85,8 +96,10 @@ namespace CenciAdv.App.Cadastros
             decimal sumReceitas = 0;
             decimal subtotal = 0;
 
+            //pegando a lista completa de transacoes
             transacoes = _transacaoService.Get<TransacaoModel>(new List<string> { "Advogado", "ClassificacaoTransacao" }).ToList();
 
+            //Filtro para incluir data
             if (checkBoxIncluirData.Checked)
             {
                 var dataInicio = dateTimePickerInicial.Value;
@@ -96,6 +109,7 @@ namespace CenciAdv.App.Cadastros
                     .ToList();
             }
 
+            //Filtro para incluir advogado
             if (checkBoxIncluirAdvogado.Checked)
             {
 
@@ -103,6 +117,17 @@ namespace CenciAdv.App.Cadastros
                 {
                     var adv = _userService.GetById<Usuario>(idAdvogado);
                     transacoes = transacoes.Where(x => x.IdAdvogado == adv.Id).ToList();
+
+                }
+
+            }
+
+            if (checkBoxIncluirTipoTransacao.Checked)
+            {
+                if (int.TryParse(cboTiposTransacao.SelectedValue.ToString(), out var idTipoTransacao))
+                {
+                    var classificacaoTransacao = _clasTransService.GetById<ClassificacaoTransacao>(idTipoTransacao);
+                    transacoes = transacoes.Where(x => x.IdAgrupamento == classificacaoTransacao.Id).ToList();
 
                 }
 
@@ -161,6 +186,16 @@ namespace CenciAdv.App.Cadastros
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             CarregaGrid();
+        }
+
+        private void ListarTransacoes_Enter(object sender, EventArgs e)
+        {
+            dateTimePickerFinal.Format = DateTimePickerFormat.Custom;
+            dateTimePickerFinal.CustomFormat = "dd/MM/yyyy";
+            dateTimePickerInicial.Format = DateTimePickerFormat.Custom;
+            dateTimePickerInicial.CustomFormat = "dd/MM/yyyy";
+            dateTimePickerFinal.Value = DateTime.UtcNow.ToLocalTime();
+            dateTimePickerInicial.Value = DateTime.UtcNow.ToLocalTime();
         }
     }
 }

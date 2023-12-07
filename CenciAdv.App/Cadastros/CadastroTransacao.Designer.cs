@@ -42,6 +42,7 @@
             tabPageCadastro.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            tabPageConsulta.SuspendLayout();
             SuspendLayout();
             // 
             // materialTabControl
@@ -74,11 +75,13 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(552, 6);
+            btnCancelar.AutoSize = false;
+            btnCancelar.Location = new Point(478, 6);
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(676, 6);
+            btnSalvar.AutoSize = false;
+            btnSalvar.Location = new Point(602, 6);
             // 
             // panel1
             // 
@@ -107,7 +110,7 @@
             txtId.HideSelection = true;
             txtId.Hint = "Id";
             txtId.LeadingIcon = null;
-            txtId.Location = new Point(656, 11);
+            txtId.Location = new Point(598, 11);
             txtId.MaxLength = 32767;
             txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtId.Name = "txtId";
@@ -176,7 +179,7 @@
             cboTiposTransacao.MaxDropDownItems = 4;
             cboTiposTransacao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cboTiposTransacao.Name = "cboTiposTransacao";
-            cboTiposTransacao.Size = new Size(292, 49);
+            cboTiposTransacao.Size = new Size(234, 49);
             cboTiposTransacao.StartIndex = 0;
             cboTiposTransacao.TabIndex = 24;
             // 
@@ -215,7 +218,7 @@
             // 
             radDespesa.AutoSize = true;
             radDespesa.Depth = 0;
-            radDespesa.Location = new Point(652, 89);
+            radDespesa.Location = new Point(594, 89);
             radDespesa.Margin = new Padding(0);
             radDespesa.MouseLocation = new Point(-1, -1);
             radDespesa.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -232,7 +235,7 @@
             // 
             radReceita.AutoSize = true;
             radReceita.Depth = 0;
-            radReceita.Location = new Point(654, 132);
+            radReceita.Location = new Point(596, 132);
             radReceita.Margin = new Padding(0);
             radReceita.MouseLocation = new Point(-1, -1);
             radReceita.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -285,7 +288,7 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(427, 43);
             dateTimePicker1.TabIndex = 29;
-            dateTimePicker1.Value = new DateTime(2023, 11, 30, 0, 0, 0, 0);
+            dateTimePicker1.Value = new DateTime(2023, 12, 7, 0, 0, 0, 0);
             // 
             // materialLabel1
             // 
@@ -311,9 +314,9 @@
             tabPageCadastro.ResumeLayout(false);
             tabPageCadastro.PerformLayout();
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            tabPageConsulta.ResumeLayout(false);
             ResumeLayout(false);
         }
 

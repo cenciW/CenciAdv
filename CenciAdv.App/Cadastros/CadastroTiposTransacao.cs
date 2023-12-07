@@ -30,6 +30,7 @@ namespace CenciAdv.App.Cadastros
 
         private void PreencheObjeto(ClassificacaoTransacao ct)
         {
+
             ct.CodAgrupamento = txtCodAgrup.Text;
             ct.NomeAgrupamento = txtNomeAgrup.Text;
             if (radReceita.Checked == true)
@@ -54,6 +55,15 @@ namespace CenciAdv.App.Cadastros
                     {
                         var ct = _clasTransService.GetById<ClassificacaoTransacao>(id);
                         PreencheObjeto(ct);
+                        if(ct.Tipo == true)
+                        {
+                            radReceita.Checked = true;
+                        }
+                        else
+                        {
+                            radDespesa.Checked = true;
+                        }
+
                         ct = _clasTransService.Update<ClassificacaoTransacao, ClassificacaoTransacao, ClassificacaoTransacaoValidator>(ct);
                     }
                 }
@@ -112,7 +122,6 @@ namespace CenciAdv.App.Cadastros
 
             if (radReceita.Checked)
             {
-                
             }
 
             if (radDespesa.Checked)

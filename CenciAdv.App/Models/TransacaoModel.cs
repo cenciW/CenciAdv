@@ -33,6 +33,7 @@ namespace CenciAdv.App.Models
         public int IdAdvogado { get; set; }
         public string? NomeAdvogado { get; set; }
         //public ClassificacaoTransacao? ClassificacaoTransacao { get; set; }
+        public int? IdAgrupamento { get; set; }
         public string? CodAgrupamento { get; set; }
         public string? NomeAgrupamento { get; set; }
         public bool TipoAgrupamento { get; set; }

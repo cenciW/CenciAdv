@@ -21,6 +21,9 @@ namespace CenciAdv.Repository.Mapping
             builder.Property(prop => prop.CodAgrupamento)
                 .IsRequired()
                 .HasColumnType("varchar(45)");
+            
+            builder.HasIndex(prop => prop.CodAgrupamento)
+                .IsUnique();
 
             builder.Property(prop => prop.NomeAgrupamento)
                 .IsRequired()

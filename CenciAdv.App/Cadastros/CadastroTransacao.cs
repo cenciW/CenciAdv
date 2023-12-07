@@ -27,6 +27,8 @@ namespace CenciAdv.App.Cadastros
         private List<TransacaoModel>? transacoes;
         public CadastroTransacao(IBaseService<Transacao> transacaoService, IBaseService<Usuario> usuarioService, IBaseService<ClassificacaoTransacao> clasTransService)
         {
+
+
             _transacaoService = transacaoService;
             _usuarioService = usuarioService;
             _clasTransService = clasTransService;
@@ -159,6 +161,7 @@ namespace CenciAdv.App.Cadastros
             }
 
 
+
             transacoes = _transacaoService.Get<TransacaoModel>(new List<string> { "Advogado", "ClassificacaoTransacao" }).ToList();
             dataGridViewConsulta.DataSource = transacoes;
             dataGridViewConsulta.Columns["DataTransacao"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -181,6 +184,10 @@ namespace CenciAdv.App.Cadastros
         private void tabPageCadastro_Enter(object sender, EventArgs e)
         {
             txtNomeAdvogado.Text = FormPrincipal.Usuario.Nome;
+
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+            dateTimePicker1.Value = DateTime.UtcNow.ToLocalTime();
         }
     }
 }

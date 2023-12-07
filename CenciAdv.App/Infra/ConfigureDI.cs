@@ -86,7 +86,8 @@ namespace CenciAdv.App.Infra
                     .ForMember(d => d.CodAgrupamento, d => d.MapFrom(x => x.ClassificacaoTransacao!.CodAgrupamento))
                     .ForMember(d => d.NomeAgrupamento, d => d.MapFrom(x => x.ClassificacaoTransacao!.NomeAgrupamento))
                     .ForMember(d => d.TipoAgrupamento, d => d.MapFrom(x => x.ClassificacaoTransacao!.Tipo))
-                    .ForMember(d => d.TipoTransacaoTxt, d => d.MapFrom(x => x.TipoTransacao ? "Receita" : "Despesa"));
+                    .ForMember(d => d.TipoTransacaoTxt, d => d.MapFrom(x => x.TipoTransacao ? "Receita" : "Despesa"))
+                    .ForMember(d => d.IdAgrupamento , d => d.MapFrom(x => x.ClassificacaoTransacao!.Id));
 
                 config.CreateMap<Consulta, ConsultaModel>()
                     .ForMember(d => d.IdCliente, d => d.MapFrom(x => x.Cliente!.Id))
