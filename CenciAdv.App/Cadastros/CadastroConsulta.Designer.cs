@@ -35,8 +35,7 @@
             dateTimePicker1 = new DateTimePicker();
             materialTabControl.SuspendLayout();
             tabPageCadastro.SuspendLayout();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
+         
             SuspendLayout();
             // 
             // materialTabControl
@@ -53,22 +52,12 @@
             tabPageCadastro.Controls.SetChildIndex(cboAdvogado, 0);
             tabPageCadastro.Controls.SetChildIndex(cboCliente, 0);
             tabPageCadastro.Controls.SetChildIndex(txtId, 0);
-            tabPageCadastro.Controls.SetChildIndex(panel1, 0);
+          
             tabPageCadastro.Controls.SetChildIndex(dateTimePicker1, 0);
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(513, 6);
-            // 
-            // btnSalvar
-            // 
-            btnSalvar.Location = new Point(637, 6);
-            // 
-            // panel1
-            // 
-            panel1.Location = new Point(3, 245);
-            panel1.Size = new Size(832, 48);
-            // 
+           
             // imageList1
             // 
             imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
@@ -77,7 +66,7 @@
             // 
             // panel2
             // 
-            panel2.Location = new Point(59, 227);
+   
             // 
             // cboAdvogado
             // 
@@ -177,10 +166,7 @@
             materialTabControl.ResumeLayout(false);
             tabPageCadastro.ResumeLayout(false);
             tabPageCadastro.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+         
             ResumeLayout(false);
         }
 

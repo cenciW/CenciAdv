@@ -38,7 +38,7 @@
             txtTelefone = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
             materialTabControl.SuspendLayout();
             tabPageCadastro.SuspendLayout();
-            panel1.SuspendLayout();
+          
             SuspendLayout();
             // 
             // materialTabControl
@@ -57,7 +57,7 @@
             tabPageCadastro.Controls.Add(txtNome);
             tabPageCadastro.Size = new Size(818, 473);
             tabPageCadastro.Click += tabPageCadastro_Click;
-            tabPageCadastro.Controls.SetChildIndex(panel1, 0);
+          
             tabPageCadastro.Controls.SetChildIndex(txtNome, 0);
             tabPageCadastro.Controls.SetChildIndex(txtEndereco, 0);
             tabPageCadastro.Controls.SetChildIndex(txtId, 0);
@@ -65,21 +65,7 @@
             tabPageCadastro.Controls.SetChildIndex(txtBairro, 0);
             tabPageCadastro.Controls.SetChildIndex(txtCpf, 0);
             tabPageCadastro.Controls.SetChildIndex(txtTelefone, 0);
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.AutoSize = false;
-            btnCancelar.Location = new Point(603, 6);
-            // 
-            // btnSalvar
-            // 
-            btnSalvar.AutoSize = false;
-            btnSalvar.Location = new Point(727, 6);
-            // 
-            // panel1
-            // 
-            panel1.Location = new Point(3, 422);
-            panel1.Size = new Size(812, 48);
+          
             // 
             // imageList1
             // 
@@ -331,7 +317,7 @@
             materialTabControl.ResumeLayout(false);
             tabPageCadastro.ResumeLayout(false);
             tabPageCadastro.PerformLayout();
-            panel1.ResumeLayout(false);
+         
             ResumeLayout(false);
         }
 

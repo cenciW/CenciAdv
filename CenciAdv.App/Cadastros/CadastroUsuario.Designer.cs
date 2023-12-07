@@ -39,7 +39,7 @@
             txtNome = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             materialTabControl.SuspendLayout();
             tabPageCadastro.SuspendLayout();
-            panel1.SuspendLayout();
+          
             SuspendLayout();
             // 
             // materialTabControl
@@ -57,7 +57,7 @@
             tabPageCadastro.Controls.Add(txtLogin);
             tabPageCadastro.Controls.Add(txtNome);
             tabPageCadastro.Size = new Size(629, 348);
-            tabPageCadastro.Controls.SetChildIndex(panel1, 0);
+            //tabPageCadastro.Controls.SetChildIndex(panel1, 0);
             tabPageCadastro.Controls.SetChildIndex(txtNome, 0);
             tabPageCadastro.Controls.SetChildIndex(txtLogin, 0);
             tabPageCadastro.Controls.SetChildIndex(txtSenha, 0);
@@ -69,16 +69,11 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(242, 6);
+            //btnCancelar.Location = new Point(242, 6);
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(366, 6);
-            // 
-            // panel1
-            // 
-            panel1.Location = new Point(3, 297);
-            panel1.Size = new Size(623, 48);
+        
             // 
             // imageList1
             // 
@@ -331,8 +326,8 @@
             materialTabControl.ResumeLayout(false);
             tabPageCadastro.ResumeLayout(false);
             tabPageCadastro.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            //panel1.ResumeLayout(false);
+            //panel1.PerformLayout();
             ResumeLayout(false);
         }
 

@@ -40,8 +40,7 @@
             materialLabel1 = new ReaLTaiizor.Controls.MaterialLabel();
             materialTabControl.SuspendLayout();
             tabPageCadastro.SuspendLayout();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
+        
             tabPageConsulta.SuspendLayout();
             SuspendLayout();
             // 
@@ -62,7 +61,7 @@
             tabPageCadastro.Controls.Add(txtId);
             tabPageCadastro.Size = new Size(786, 336);
             tabPageCadastro.Enter += tabPageCadastro_Enter;
-            tabPageCadastro.Controls.SetChildIndex(panel1, 0);
+            
             tabPageCadastro.Controls.SetChildIndex(txtId, 0);
             tabPageCadastro.Controls.SetChildIndex(txtDescricaoTransacao, 0);
             tabPageCadastro.Controls.SetChildIndex(cboTiposTransacao, 0);
@@ -73,30 +72,13 @@
             tabPageCadastro.Controls.SetChildIndex(dateTimePicker1, 0);
             tabPageCadastro.Controls.SetChildIndex(materialLabel1, 0);
             // 
-            // btnCancelar
-            // 
-            btnCancelar.AutoSize = false;
-            btnCancelar.Location = new Point(478, 6);
-            // 
-            // btnSalvar
-            // 
-            btnSalvar.AutoSize = false;
-            btnSalvar.Location = new Point(602, 6);
-            // 
-            // panel1
-            // 
-            panel1.Location = new Point(3, 285);
-            panel1.Size = new Size(780, 48);
-            // 
+           
             // imageList1
             // 
             imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
             imageList1.Images.SetKeyName(0, "form.png");
             imageList1.Images.SetKeyName(1, "search.png");
-            // 
-            // panel2
-            // 
-            panel2.Location = new Point(33, 285);
+          
             // 
             // txtId
             // 
@@ -313,9 +295,7 @@
             materialTabControl.ResumeLayout(false);
             tabPageCadastro.ResumeLayout(false);
             tabPageCadastro.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+          
             tabPageConsulta.ResumeLayout(false);
             ResumeLayout(false);
         }

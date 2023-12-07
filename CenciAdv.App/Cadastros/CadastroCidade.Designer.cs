@@ -34,7 +34,7 @@
             this.txtNome = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             this.materialTabControl.SuspendLayout();
             this.tabPageCadastro.SuspendLayout();
-            this.panel1.SuspendLayout();
+            //this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialTabControl
@@ -47,25 +47,24 @@
             this.tabPageCadastro.Controls.Add(this.txtId);
             this.tabPageCadastro.Controls.Add(this.txtNome);
             this.tabPageCadastro.Size = new System.Drawing.Size(804, 176);
-            this.tabPageCadastro.Controls.SetChildIndex(this.panel1, 0);
+            //this.tabPageCadastro.Controls.SetChildIndex(this.panel1, 0);
             this.tabPageCadastro.Controls.SetChildIndex(this.txtNome, 0);
             this.tabPageCadastro.Controls.SetChildIndex(this.txtId, 0);
             this.tabPageCadastro.Controls.SetChildIndex(this.cboEstado, 0);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(540, 6);
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            //this.btnCancelar.Location = new System.Drawing.Point(540, 6);
+            //this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(665, 6);
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            //this.btnSalvar.Location = new System.Drawing.Point(665, 6);
+            //this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(3, 125);
-            this.panel1.Size = new System.Drawing.Size(798, 48);
+        
             // 
             // imageList1
             // 
@@ -197,8 +196,7 @@
             this.materialTabControl.ResumeLayout(false);
             this.tabPageCadastro.ResumeLayout(false);
             this.tabPageCadastro.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+       
             this.ResumeLayout(false);
 
         }

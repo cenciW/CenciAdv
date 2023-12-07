@@ -36,7 +36,7 @@
             radDespesa = new ReaLTaiizor.Controls.MaterialRadioButton();
             materialTabControl.SuspendLayout();
             tabPageCadastro.SuspendLayout();
-            panel1.SuspendLayout();
+         
             SuspendLayout();
             // 
             // materialTabControl
@@ -51,25 +51,13 @@
             tabPageCadastro.Controls.Add(txtNomeAgrup);
             tabPageCadastro.Controls.Add(txtCodAgrup);
             tabPageCadastro.Size = new Size(838, 203);
-            tabPageCadastro.Controls.SetChildIndex(panel1, 0);
+         
             tabPageCadastro.Controls.SetChildIndex(txtCodAgrup, 0);
             tabPageCadastro.Controls.SetChildIndex(txtNomeAgrup, 0);
             tabPageCadastro.Controls.SetChildIndex(txtId, 0);
             tabPageCadastro.Controls.SetChildIndex(radDespesa, 0);
             tabPageCadastro.Controls.SetChildIndex(radReceita, 0);
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.Location = new Point(546, 6);
-            // 
-            // btnSalvar
-            // 
-            btnSalvar.Location = new Point(670, 6);
-            // 
-            // panel1
-            // 
-            panel1.Location = new Point(3, 152);
-            panel1.Size = new Size(832, 48);
+         
             // 
             // imageList1
             // 
@@ -217,8 +205,7 @@
             materialTabControl.ResumeLayout(false);
             tabPageCadastro.ResumeLayout(false);
             tabPageCadastro.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+           
             ResumeLayout(false);
         }
 
